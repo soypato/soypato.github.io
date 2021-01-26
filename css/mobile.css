@@ -1,0 +1,114 @@
+@media only screen and (min-width: 200px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-size: 62.5%;
+        font-family: 'Open Sans', sans-serif;
+        ;
+    }
+    body {
+        background-color: #20201e;
+        /* background-image: linear-gradient(to right, #6178f5 0%, #a6c1ee 100%); */
+    }
+    header img {
+        width: 100em;
+        display: block;
+        margin: auto;
+        position: relative;
+        top: 25em;
+        clip-path: circle(50% at 50% 50%);
+        animation-name: movimg;
+        animation-duration: 2s;
+    }
+    @keyframes movimg {
+        0% {
+            transform: translateY(-200em);
+        }
+        100% {
+            transform: translateY(0em);
+        }
+    }
+    h1 {
+        margin: 1.5em 0;
+        color: #fff;
+        font-size: 12em;
+        font-weight: 600;
+        text-align: center;
+        animation-name: movh1;
+        animation-duration: 2s;
+    }
+    @keyframes movh1 {
+        0% {
+            font-size: 0;
+        }
+        100% {
+            font-size: 12em;
+        }
+    }
+    .description {
+        margin: -4em 50px -2em 50px;
+        color: #fff;
+        font-size: 4em;
+        font-weight: 300;
+        text-align: center;
+        animation-name: movd;
+        animation-duration: 1s;
+    }
+    @keyframes movd {
+        0% {
+            font-size: 0;
+        }
+        100% {
+            font-size: 4em;
+        }
+    }
+    .cont {
+        display: grid;
+        grid-template-columns: 0 1fr 0;
+        grid-template-rows: 1fr;
+    }
+    .social {
+        grid-area: 1/2;
+        margin: auto;
+        padding: 10em;
+    }
+    .redes {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 10px 1fr 1fr 10px;
+        border: 1px #fff solid;
+        border-radius: 5em;
+        padding: 10em;
+        margin: 10em;
+    }
+    .redes img {
+        max-width: 100px;
+        grid-area: 2/2;
+        margin: auto;
+    }
+    .redes a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 10em;
+        margin-top: auto;
+        margin-bottom: auto;
+        grid-area: 3/2;
+    }
+    #th-logo {
+        width: 70px;
+    }
+    #in-logo {
+        width: 70px;
+    }
+    .social p {
+        font-size: 15em;
+        margin: 1em 0;
+        color: #fff;
+        font-weight: 400;
+        text-align: center;
+    }
+    footer {
+        height: 80px;
+    }
+}
