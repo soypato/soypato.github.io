@@ -1,114 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: 'Rubik', sans-serif;
+}
+
+ :root {
+    --main-background-color: #20201e;
+    --main-text-color: #fff;
+    --second-text-color: #0066ff;
+}
+
 @media only screen and (min-width: 200px) {
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-size: 62.5%;
-        font-family: 'Open Sans', sans-serif;
-        ;
-    }
     body {
-        background-color: #20201e;
-        /* background-image: linear-gradient(to right, #6178f5 0%, #a6c1ee 100%); */
+        background-color: var(--main-background-color);
+    }
+    .landscape img {
+        position: relative;
+        z-index: 10;
+        object-fit: cover;
+        width: 100%;
+        height: 250px;
     }
     header img {
         width: 100em;
         display: block;
         margin: auto;
+        z-index: 20;
+        top: -60em;
         position: relative;
-        top: 25em;
-        clip-path: circle(50% at 50% 50%);
         animation-name: movimg;
         animation-duration: 2s;
-    }
-    @keyframes movimg {
-        0% {
-            transform: translateY(-200em);
-        }
-        100% {
-            transform: translateY(0em);
-        }
+        border-radius: 10em;
     }
     h1 {
-        margin: 1.5em 0;
-        color: #fff;
+        color: var(--main-text-color);
+        text-align: center;
         font-size: 12em;
         font-weight: 600;
-        text-align: center;
         animation-name: movh1;
         animation-duration: 2s;
+        position: relative;
+        bottom: 2.5em;
     }
-    @keyframes movh1 {
-        0% {
-            font-size: 0;
-        }
-        100% {
-            font-size: 12em;
-        }
+    h1:hover {
+        color: var(--second-text-color);
     }
     .description {
-        margin: -4em 50px -2em 50px;
-        color: #fff;
+        color: var(--main-text-color);
+        margin: 1em;
         font-size: 4em;
-        font-weight: 300;
         text-align: center;
-        animation-name: movd;
-        animation-duration: 1s;
-    }
-    @keyframes movd {
-        0% {
-            font-size: 0;
-        }
-        100% {
-            font-size: 4em;
-        }
-    }
-    .cont {
-        display: grid;
-        grid-template-columns: 0 1fr 0;
-        grid-template-rows: 1fr;
-    }
-    .social {
-        grid-area: 1/2;
-        margin: auto;
-        padding: 10em;
-    }
-    .redes {
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: 10px 1fr 1fr 10px;
-        border: 1px #fff solid;
-        border-radius: 5em;
-        padding: 10em;
-        margin: 10em;
-    }
-    .redes img {
-        max-width: 100px;
-        grid-area: 2/2;
-        margin: auto;
-    }
-    .redes a {
-        text-decoration: none;
-        color: #fff;
-        font-size: 10em;
-        margin-top: auto;
-        margin-bottom: auto;
-        grid-area: 3/2;
-    }
-    #th-logo {
-        width: 70px;
-    }
-    #in-logo {
-        width: 70px;
+        position: relative;
+        top: -6.5em;
     }
     .social p {
-        font-size: 15em;
-        margin: 1em 0;
-        color: #fff;
-        font-weight: 400;
+        color: var(--main-text-color);
+        font-size: 35px;
+        padding: .7em 0;
+        text-align: center;
+        position: relative;
+        bottom: 2.5em;
+    }
+    .social p:hover {
+        color: var(--second-text-color);
+    }
+    .redes {
         text-align: center;
     }
+    .redes a {
+        color: var(--main-text-color);
+        text-decoration: none;
+        font-size: 25px;
+        position: relative;
+        bottom: 3.5em;
+    }
+    .redes a:hover {
+        color: #438cfa;
+    }
     footer {
-        height: 80px;
+        background-color: var(--second-text-color);
+        height: 40px;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
+    footer p {
+        padding-top: .3em;
+        font-size: 8em;
+        padding-bottom: 2em;
+        text-align: center;
+        color: var(--main-text-color);
     }
 }
