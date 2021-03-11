@@ -1,2 +1,2 @@
-# porfolio-ptb
+# portfolio-ptb
 A page that talks about me.
