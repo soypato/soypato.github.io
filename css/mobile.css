@@ -80,6 +80,9 @@
         color: #438cfa;
     }
     footer {
+        display: flex;
+        justify-content: center;
+        font-size: .5em;
         background-color: var(--second-text-color);
         height: 40px;
         position: fixed;
