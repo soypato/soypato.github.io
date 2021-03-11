@@ -2,4 +2,7 @@
     .description {
         margin: 0;
     }
+    footer {
+        height: 40px;
+    }
 }
