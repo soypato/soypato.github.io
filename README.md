@@ -3,6 +3,6 @@ Este es el repositorio oficial del portfolio de **Patricio Tubio**, puedes hacer
 ## El propósito
 La idea de este portfolio es que funcione como un árbol de links que ayude a las personas a organizar los enlaces que **me representan**, de forma social y profesional, algo así como una versión *open source* recortada de [**Linktree**](https://linktr.ee/ "Linktree"). Este, será el sitio de GitHub Pages de mi cuenta (disponible en [**soypato.github.io**](soypato.github.io "soypato.github.io")).
 ## Cómo sigue el proyecto
-La idea es también no solo usar este proyecto con el propósito inicial, sino también usarlo para modelo de prácticas, agregar, experimentar, etc. Nuevamente,** puedes tomarlo para tus ideas**.
+La idea es también no solo usar este proyecto con el propósito inicial, sino también usarlo para modelo de prácticas, agregar, experimentar, etc. Nuevamente, **puedes tomarlo para tus ideas**.
 
-Con ♥ Patricio Tubio ([soypato](soypato.github.io "soypato")).
+Con ♥ Patricio Tubio ([soypato](soypato.github.io "soypato"))
