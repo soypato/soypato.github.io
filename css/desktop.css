@@ -5,6 +5,12 @@
     .cont {
         transform: translateY(-60em);
     }
+    @keyframes fadeOutRight {
+        100% {
+            opacity: 0;
+            transform: translate3d(220%, 0, 0);
+        }
+    }
     .footer {
         transform: translateY(20em);
     }

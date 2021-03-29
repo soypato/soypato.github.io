@@ -23,6 +23,8 @@
         width: 100%;
         height: 250px;
         z-index: 10;
+        border-bottom-left-radius: 4em;
+        border-bottom-right-radius: 4em;
     }
     .name {
         position: relative;
@@ -46,6 +48,34 @@
         font-size: 8em;
         margin: 0.4em 2em 0 2em;
         color: var(--main-text-color);
+    }
+    .animation {
+        position: absolute;
+        top: 20em;
+        left: -140em;
+        animation-name: fadeOutRight;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+        animation-duration: 10s;
+        animation-fill-mode: backwards;
+    }
+    @keyframes fadeOutRight {
+        0% {
+            opacity: 0;
+        }
+        10% {
+            opacity: 10;
+        }
+        50% {
+            opacity: 50;
+        }
+        100% {
+            opacity: 0;
+            transform: translate3d(30%, 0, 0);
+        }
+    }
+    .animation svg {
+        width: 500px;
     }
     .svg {
         transform: translateY(-45em);
@@ -86,7 +116,7 @@ footer {
     grid-template-rows: 1fr 2fr 1fr;
     grid-template-columns: 1fr 2fr 1fr;
     font-size: .5em;
-    transform: translateY(50em);
+    transform: translateY(80em);
     position: relative;
     left: 0;
     bottom: 0;
