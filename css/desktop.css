@@ -5,4 +5,7 @@
     .cont {
         transform: translateY(-60em);
     }
+    .footer {
+        transform: translateY(20em);
+    }
 }
