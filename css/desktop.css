@@ -1,8 +1,8 @@
 @media only screen and (min-width: 1024px) {
-    .description {
-        margin: 0;
+    .svg {
+        transform: translateY(-80em);
     }
-    footer {
-        height: 40px;
+    .cont {
+        transform: translateY(-60em);
     }
 }
