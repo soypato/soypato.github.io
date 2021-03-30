@@ -6,6 +6,15 @@
         transform: translateY(-60em);
     }
     @keyframes fadeOutRight {
+        0% {
+            opacity: 0;
+        }
+        10% {
+            opacity: .1;
+        }
+        50% {
+            opacity: .5;
+        }
         100% {
             opacity: 0;
             transform: translate3d(220%, 0, 0);

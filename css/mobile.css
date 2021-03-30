@@ -52,30 +52,30 @@
     .animation {
         position: absolute;
         top: 20em;
-        left: -140em;
         animation-name: fadeOutRight;
         animation-iteration-count: infinite;
         animation-direction: alternate-reverse;
         animation-duration: 10s;
         animation-fill-mode: backwards;
+        opacity: .3;
     }
     @keyframes fadeOutRight {
         0% {
             opacity: 0;
         }
         10% {
-            opacity: 10;
+            opacity: .1;
         }
         50% {
-            opacity: 50;
+            opacity: .5;
         }
         100% {
             opacity: 0;
-            transform: translate3d(30%, 0, 0);
+            transform: translate3d(20%, 0, 0);
         }
     }
     .animation svg {
-        width: 500px;
+        width: 300px;
     }
     .svg {
         transform: translateY(-45em);
