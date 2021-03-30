@@ -87,6 +87,8 @@
     .cont {
         transform: translateY(-30em);
         background-color: var(--second-text-color);
+        border-bottom-left-radius: 5em;
+        border-bottom-right-radius: 5em;
     }
     .social p {
         font-size: 20em;
