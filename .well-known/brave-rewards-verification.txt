@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: soypato.github.io
+Token: 23ebcc6a5e1973d4829af76a6ffec767bbbd25c4943a166fed9b86bf1e2aa278
