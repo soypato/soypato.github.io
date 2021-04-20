@@ -1,0 +1,26 @@
+@media only screen and (min-width: 1024px) {
+    .svg {
+        transform: translateY(-300em);
+    }
+    .cont {
+        transform: translateY(-240em);
+    }
+    @keyframes fadeOutRight {
+        0% {
+            opacity: 0;
+        }
+        10% {
+            opacity: .1;
+        }
+        50% {
+            opacity: .5;
+        }
+        100% {
+            opacity: 0;
+            transform: translate3d(220%, 0, 0);
+        }
+    }
+    .footer {
+        transform: translateY(20em);
+    }
+}
