@@ -38,7 +38,6 @@
         border-radius: 5em;
     }
     .name h1 {
-        padding: 1em;
         text-align: center;
         font-size: 20em;
         margin: 0.4em 0 0 0;
@@ -86,12 +85,13 @@
         width: 100%;
     }
     .cont {
-        transform: translateY(-275em);
+        transform: translateY(-270em);
         background-color: var(--second-text-color);
         border-bottom-left-radius: 5em;
         border-bottom-right-radius: 5em;
     }
     .social p {
+        padding: 1em;
         font-size: 20em;
         color: var(--main-text-color);
         text-align: center;
