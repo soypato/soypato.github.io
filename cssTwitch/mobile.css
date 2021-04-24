@@ -12,7 +12,7 @@
     --second-text-color: #8600d3;
 }
 
-@media only screen and (min-width: 200px) {
+@media only screen and (min-width: 300px) {
     body {
         background-color: var(--main-background-color);
     }
@@ -38,6 +38,7 @@
         border-radius: 5em;
     }
     .name h1 {
+        padding: 1em;
         text-align: center;
         font-size: 20em;
         margin: 0.4em 0 0 0;
@@ -85,7 +86,7 @@
         width: 100%;
     }
     .cont {
-        transform: translateY(-20em);
+        transform: translateY(-275em);
         background-color: var(--second-text-color);
         border-bottom-left-radius: 5em;
         border-bottom-right-radius: 5em;
