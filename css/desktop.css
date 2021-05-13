@@ -1,10 +1,6 @@
 @media only screen and (min-width: 1024px) {
-    .svg {
-        transform: translateY(-80em);
-    }
-    .cont {
-        transform: translateY(-60em);
-    }
+   
+    
     @keyframes fadeOutRight {
         0% {
             opacity: 0;
