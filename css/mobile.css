@@ -41,7 +41,7 @@
     }
     .animation {
         position: absolute;
-        top: 20em;
+        bottom: 25rem;
         animation-name: fadeOutRight;
         animation-iteration-count: infinite;
         animation-direction: alternate-reverse;
@@ -70,14 +70,16 @@
     .svg {
         transform: translateY(-45em);
     }
-   
+   main{
+       font-size: .6rem;
+   }
     .cont {
         transform: translateY(-10rem);
         background-color: var(--second-text-color);
         border-radius: 4em;
     }
     .social p {
-        padding: 1.4rem 0;
+        padding: 2rem 0 .7rem 0;
         font-size: 20em;
         color: var(--main-text-color);
         text-align: center;
@@ -98,6 +100,14 @@
         background-color: var(--main-text-color);
         color: var(--main-background-color);
     }
+    .sociallogo{
+       max-width: 2rem;
+    }
+
+
+    .bold{
+       padding: .1em; background-color: #000; color:#8300d3 "
+    }
 }
 
 footer {
@@ -105,16 +115,21 @@ footer {
     grid-template-rows: 1fr 2fr 1fr;
     grid-template-columns: 1fr 2fr 1fr;
     font-size: .5em;
-    transform: translateY(80em);
-    position: relative;
-    left: 0;
-    bottom: 0;
+    transform: translateY(-25em);
     width: 100%;
+    padding: 1rem;
 }
 
 footer p {
     grid-area: 2/2;
     text-align: center;
     color: var(--main-text-color);
-    font-size: 7em;
+    font-size: 2rem;
+}
+
+.sources{
+    font-size: 2rem;
+    color: #8300d3;
+
+    text-decoration: none;
 }

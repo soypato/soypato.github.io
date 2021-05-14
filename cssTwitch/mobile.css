@@ -119,10 +119,7 @@ footer {
     grid-template-rows: 1fr 2fr 1fr;
     grid-template-columns: 1fr 2fr 1fr;
     font-size: .5em;
-    transform: translateY(80em);
-    position: relative;
-    left: 0;
-    bottom: 0;
+    transform: translateY(90em);
     width: 100%;
 }
 
