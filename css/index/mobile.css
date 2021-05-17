@@ -33,6 +33,10 @@
         font-size: 8rem;
         color: var(--main-text-color);
     }
+    .name img{
+        max-width: 25rem;
+        position: ;
+    }
     .name .description {
         text-align: center;
         font-size: 8em;
