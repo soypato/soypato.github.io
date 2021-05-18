@@ -137,3 +137,8 @@ footer p {
 
     text-decoration: none;
 }
+
+.cont{
+    display: inline
+    ;
+}
