@@ -23,29 +23,35 @@
         border-radius: .3rem;
     }
     .name{
-        transform: translateY(-10rem);
+        transform: translateY(-10rem);                                                                                              rem);
         padding: 15rem 0;
         position: relative;
         z-index: 10;
     }
     .name h1 {
+        transform: translateY(-18rem);
         text-align: center;
-        font-size: 8rem;
+        font-size: 4rem;
         color: var(--main-text-color);
-    }
-    .name img{
-        max-width: 25rem;
-        position: ;
     }
     .name .description {
         text-align: center;
-        font-size: 8em;
+        transform: translateY(-18.3rem);
+        font-size: 7em;
         margin: 0.4em 2em -4em 2em;
         color: var(--main-text-color);
     }
+
+    .name img {
+        max-width: 20rem;
+        display: block;
+        transform: translateY(-20rem);
+        margin: auto;
+        border-radius: 5em;
+    }
     .animation {
-        position: absolute;
-        bottom: 25rem;
+        position: fixed;
+        bottom: 0rem;
         animation-name: fadeOutRight;
         animation-iteration-count: infinite;
         animation-direction: alternate-reverse;
@@ -69,16 +75,17 @@
         }
     }
     .animation svg {
-        width: 300px;
+        width: 200px;
     }
-    .svg {
-        transform: translateY(-45em);
+    .svg { /* wave */
+        transform: translateY(-45rem);
+
     }
    main{
        font-size: .6rem;
    }
     .cont {
-        transform: translateY(-10rem);
+        transform: translateY(-48rem);
         background-color: var(--second-text-color);
         border-radius: 4em;
     }
@@ -127,8 +134,9 @@ footer {
 footer p {
     grid-area: 2/2;
     text-align: center;
+    margin: 5rem 0 0 0;
     color: var(--main-text-color);
-    font-size: 2rem;
+    font-size: 1rem;
 }
 
 .sources{

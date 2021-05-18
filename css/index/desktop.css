@@ -20,8 +20,28 @@
         display: grid;
         grid-template-columns: 1fr 2fr 1fr;
     }
+    .name h1{
+        font-size: 6.3rem;
+        transform: translateY(-23rem);
+
+    }
+    .name img{
+        max-width: 25rem;
+        display: block;
+        transform: translateY(-25rem);
+    }
+
+    .name .description {
+        transform: translateY(-22.3rem);
+    }
+    .svg {
+        transform: translateY(-50rem);
+    }
+
     .cont{
         grid-area: 2 / 2 ;
+        transform: translateY(-52rem);
+
     }
     .footer {
         transform: translateY(20em);
