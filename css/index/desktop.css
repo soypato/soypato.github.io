@@ -15,3 +15,34 @@
             transform: translate3d(220%, 0, 0);
         }
     }
+
+    main{
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+    
+    .landscape img{
+        position: relative;
+    }
+
+    .res{
+        font-size: 100%;
+        margin: -70rem 0 0 0 ;
+    }
+    
+    .name h1{
+        font-size: 6.3rem;
+
+
+    }
+
+    .name img{
+        max-width: 25rem;
+
+
+    }
+    
+    .cont{
+        position: relative;
+    }
+}

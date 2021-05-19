@@ -17,6 +17,8 @@
         background-color: var(--main-background-color);
     }
     .landscape img {
+       position: fixed;
+        z-index: 10;
         object-fit: cover;
         width: 100%;
         height: 250px;
@@ -30,12 +32,16 @@
     .name h1 {
         text-align: center;
         font-size: 4rem;
+        position: relative;
+        top: -8rem;
         color: var(--main-text-color);
         padding: 1.2rem 0 .3rem 0;
     }
     .name .description {
         text-align: center;
         font-size: 7em;
+        position: relative;
+        top: -8rem;
         margin: 0.4em 2em -4em 2em;
         color: var(--main-text-color);
     }
@@ -43,7 +49,10 @@
     .name img {
         max-width: 20rem;
         display: block;
-        margin: -170em auto 0 autO;
+        margin: auto;
+        position: relative;
+        z-index: 20;
+        top: -9rem;
         border-radius: 5em;
     }
     .animation {
@@ -74,7 +83,7 @@
         width: 200px;
     }
     .svg /* wave */{ 
-        margin: -80em 0 0 0;
+        margin: 0 0 0 0;
         
     }
    main{
@@ -84,6 +93,10 @@
         background-color: var(--second-text-color);
         border-radius: 4em;
         transform: translateY(-2rem);
+    }
+    .res{
+        font-size: 100%;
+        margin: -25rem 0 0 0 ;
     }
     .social p {
         padding: 2rem 0 .7rem 0;
@@ -113,7 +126,7 @@
 
 
     .bold{
-       padding: .1em; background-color: #000; color:#8300d3 "
+       padding: .1em; background-color: #000; color:#8300d3;
     }
 }
 
