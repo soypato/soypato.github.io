@@ -1,5 +1,11 @@
+
 @media only screen and (min-width: 1024px) {
-    
+    .svg {
+        transform: translateY(-120em);
+    }
+    .cont {
+        transform: translateY(-160em);
+    }
     @keyframes fadeOutRight {
         0% {
             opacity: 0;
@@ -15,34 +21,7 @@
             transform: translate3d(220%, 0, 0);
         }
     }
-
-    main{
-        display: grid;
-        grid-template-columns: 1fr 2fr 1fr;
-    }
-    
-    .landscape img{
-        position: relative;
-    }
-
-    .res{
-        font-size: 100%;
-        margin: -70rem 0 0 0 ;
-    }
-    
-    .name h1{
-        font-size: 6.3rem;
-
-
-    }
-
-    .name img{
-        max-width: 25rem;
-
-
-    }
-    
-    .cont{
-        position: relative;
+    .footer {
+        transform: translateY(20em);
     }
 }

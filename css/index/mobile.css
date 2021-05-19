@@ -17,8 +17,7 @@
         background-color: var(--main-background-color);
     }
     .landscape img {
-       position: fixed;
-        z-index: 10;
+        position: sticky;
         object-fit: cover;
         width: 100%;
         height: 250px;
@@ -28,7 +27,7 @@
         padding: 15rem 0;
         position: relative;
         z-index: 10;
-    }
+    }       
     .name h1 {
         text-align: center;
         font-size: 4rem;
@@ -36,6 +35,7 @@
         top: -8rem;
         color: var(--main-text-color);
         padding: 1.2rem 0 .3rem 0;
+        transform: translateY(-20rem);
     }
     .name .description {
         text-align: center;
@@ -44,6 +44,8 @@
         top: -8rem;
         margin: 0.4em 2em -4em 2em;
         color: var(--main-text-color);
+        transform: translateY(-20rem);
+
     }
 
     .name img {
@@ -51,9 +53,10 @@
         display: block;
         margin: auto;
         position: relative;
-        z-index: 20;
+        z-index: 10;
         top: -9rem;
         border-radius: 5em;
+        transform: translateY(-20rem);
     }
     .animation {
         position: fixed;
@@ -81,6 +84,7 @@
     }
     .animation svg {
         width: 200px;
+        transform: translateY(-100em);
     }
     .svg /* wave */{ 
         margin: 0 0 0 0;
@@ -97,6 +101,7 @@
     .res{
         font-size: 100%;
         margin: -25rem 0 0 0 ;
+        transform: translateY(-40em);
     }
     .social p {
         padding: 2rem 0 .7rem 0;
