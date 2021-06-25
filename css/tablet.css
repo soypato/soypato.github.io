@@ -1,0 +1,17 @@
+@media (min-width: 768px) {
+
+    .basicImg > img{
+        display: inline;
+        max-width: 15rem;
+        margin: 2rem 0;
+        border-radius: 1rem;
+    }
+    
+    .divNames{
+        grid-area: 2 / 1;
+        margin: auto 0;
+        font-size: 1.2rem;
+    }
+    
+
+}
