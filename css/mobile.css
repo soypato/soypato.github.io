@@ -6,12 +6,13 @@
 
 html {
     font-size: 62.5%;
-    font-family: 'Rubik', sans-serif !important;
+    font-family: 'Rubik', sans-serif;
 }
 
 :root {
     --first-color: #fafafa;
     --accent-color: #001220;
+    --third-color: #b8b5b5;
 }
 
 @media (min-width: 200px) {
@@ -25,23 +26,23 @@ html {
         top: 0px;
         width: 100%;
         height: 4rem;
-        box-shadow: -4px 10px 35px 0px rgb(0 0 0 / 4%)
+        font-family: 'Rubik', sans-serif;
+        border-bottom: 6.1rem var(--third-color) solid;
     }
     h1 {
         font-size: 2rem;
         margin-left: 1rem;
-        text-shadow: 6px 5px 11px rgba(150, 150, 150, 0.71);
     }
     .navbar-collapse {
         flex-direction: row-reverse;
     }
     .navbar-light .navbar-nav .nav-link.active {
-        color: #0000ec;
+        color: var(--accent-color);
         font-size: 1.4rem;
         margin-left: 2rem;
     }
     .navbar-light .navbar-nav .nav-link.active:hover {
-        color: var(--accent-color);
+        color: var(--third-color);
     }
     body {
         background-color: var(--first-color);
