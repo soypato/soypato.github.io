@@ -6,7 +6,7 @@
 
 html {
     font-size: 62.5%;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Rubik', sans-serif !important;
 }
 
 :root {
@@ -15,15 +15,33 @@ html {
 }
 
 @media (min-width: 200px) {
+    nav {
+        font-size: 2rem;
+        position: sticky;
+    }
     header {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        background-color: var(--first-color);
         position: sticky;
         z-index: 300;
         top: 0px;
         width: 100%;
-        box-shadow: -4px 10px 35px 0px rgba(0, 0, 0, 0.04);
+        height: 4rem;
+        box-shadow: -4px 10px 35px 0px rgb(0 0 0 / 4%)
+    }
+    h1 {
+        font-size: 2rem;
+        margin-left: 1rem;
+        text-shadow: 6px 5px 11px rgba(150, 150, 150, 0.71);
+    }
+    .navbar-collapse {
+        flex-direction: row-reverse;
+    }
+    .navbar-light .navbar-nav .nav-link.active {
+        color: #0000ec;
+        font-size: 1.4rem;
+        margin-left: 2rem;
+    }
+    .navbar-light .navbar-nav .nav-link.active:hover {
+        color: var(--accent-color);
     }
     body {
         background-color: var(--first-color);
@@ -32,21 +50,6 @@ html {
     h1 {
         font-size: 2rem;
         margin: 1rem 0 1rem 2rem;
-    }
-    nav {
-        font-size: 1.4rem;
-        text-align: right;
-        margin: 1rem 2rem 0 0;
-    }
-    nav a {
-        text-decoration: none;
-        padding: .3rem .5rem;
-        transition: background 0.1s linear;
-        border-radius: 1rem;
-    }
-    nav a:hover {
-        color: #000;
-        background-color: #fff;
     }
     main {
         display: grid;

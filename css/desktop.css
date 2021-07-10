@@ -1,24 +1,19 @@
 @media (min-width: 1024px) {
-    main{
+    main {
         display: grid;
         grid-template-columns: 1fr 2fr 1fr;
-
     }
-    .disGrid{
+    .disGrid {
         grid-area: 1 / 2;
     }
-
-    nav{
+    .navbar-light .navbar-nav .nav-link.active {
+        color: #0000ec;
         font-size: 1.4rem;
-        text-align: right;
-        transform: translateY(.4rem);
-           
+        margin-left: 0;
     }
-
-    table{
+    table {
         border: .2rem solid #111;
         font-size: 1.8rem;
         margin: 1.2rem;
     }
-
 }
