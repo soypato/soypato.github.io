@@ -11,8 +11,9 @@ html {
 
 :root {
     --first-color: #fafafa;
-    --accent-color: #001220;
-    --third-color: #b8b5b5;
+    --accent-color: #000000;
+    --third-color: #ddd9d9;
+    --hover-color: #dddada;
 }
 
 @media (min-width: 200px) {
@@ -118,9 +119,6 @@ html {
     a {
         text-decoration: none;
     }
-    a:hover {
-        color: #a566ee;
-    }
     h5 {
         margin: .3rem 0 0 0;
         font-size: 1rem;
@@ -141,8 +139,8 @@ html {
         align-items: center;
     }
     .skills-p:hover {
-        color: var(--first-color);
-        background-color: var(--accent-color);
+        color: var(--accent-color);
+        background-color: var(--hover-color);
         transition: background 0.1s linear;
     }
     .iconSrc {
