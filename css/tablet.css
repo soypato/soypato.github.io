@@ -1,4 +1,8 @@
 @media (min-width: 768px) {
+    .features{
+        display: flex;
+        flex-direction: row-reverse;
+    }
     .basicImg>img {
         display: inline;
         max-width: 15rem;
