@@ -1,8 +1,16 @@
 @media (min-width: 768px) {
     .features{
-        display: flex;
-        flex-direction: row-reverse;
+        display: grid;
+        grid-template-columns: 3.5fr 2fr;
     }
+    .exp:nth-child(1){
+        grid-area: 2 / 2;
+    }
+    .exp:nth-child(2){
+        grid-area: 2 / 1;
+    }
+
+
     .basicImg>img {
         display: inline;
         max-width: 15rem;
