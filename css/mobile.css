@@ -5,7 +5,7 @@
     font-family: 'Rubik', sans-serif;}
 
 html {
-    font-size: 48%;
+    font-size: 60%;
 }
 
 :root {
@@ -101,6 +101,11 @@ html {
         box-shadow: -4px 10px 35px 0px rgba(0, 0, 0, 0.06);
         border-radius: 1rem;
         padding: 2rem 4rem;
+      
+    }
+    .features{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
     }
     h2 {
         margin: 2rem 0 1.3rem 0;
