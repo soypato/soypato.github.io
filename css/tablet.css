@@ -9,8 +9,6 @@
     .exp:nth-child(2){
         grid-area: 2 / 1;
     }
-
-
     .basicImg>img {
         display: inline;
         max-width: 15rem;
