@@ -20,5 +20,13 @@
         margin: auto 0;
         font-size: 1.2rem;
     }
+    .skills h2{
+        font-size: 1.9rem;
+        padding: 0rem 0;
+    }  
+    .skills h3{
+        display: block;
+        padding: 1rem 0;
+    }
     
 }

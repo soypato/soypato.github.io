@@ -12,7 +12,7 @@ html {
     --first-color: #fafafa;
     --accent-color: #000000;
     --third-color: #ddd9d9;
-    --hover-color: #dddada;
+    --hover-color: #f3ebeb;
 }
 
 @media (min-width: 200px) {
@@ -85,6 +85,7 @@ html {
     }
     .name {
         font-size: 3rem;
+        padding: 1rem 0 0 0;
     }
     .logos {
         padding: 1rem 0;
@@ -97,13 +98,13 @@ html {
         position: relative;
         bottom: 2rem;
         font-size: 5%;
-        box-shadow: -4px 10px 35px 0px rgba(0, 0, 0, 0.06);
-        border-radius: 1rem;
-        padding: 4rem;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;       
+        border-radius: .5rem;
+        padding: 3rem;
     }
     h2 {
         margin: 2rem 0 1.3rem 0;
-        font-size: 2rem;
+        font-size: 1.9rem;
     }
     h3 {
         margin: 1rem 0 .3rem 0;
@@ -114,6 +115,10 @@ html {
     }
     a {
         text-decoration: none;
+        color: #8c8fd1;
+    }
+    a:hover{
+        color: #626395;
     }
     h5 {
         margin: .3rem 0 0 0;
@@ -128,7 +133,7 @@ html {
     }
     .skills-p {
         font-size: 1rem;
-        border: .05rem solid rgb(70, 67, 67);
+        border: .05rem solid rgba(0, 0, 0, 0.05);
         border-radius: .5rem;
         padding: 1rem;
         display: flex;
@@ -138,6 +143,9 @@ html {
         color: var(--accent-color);
         background-color: var(--hover-color);
         transition: background 0.1s linear;
+    }
+    .skills h3{
+        display: none;
     }
     .iconSrc {
         margin: 2rem 0;
