@@ -1,7 +1,7 @@
 @media (min-width: 1024px) {
     main {
         display: grid;
-        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-columns: 1fr 2.2fr 1fr;
     }
     .disGrid {
         grid-area: 1 / 2;

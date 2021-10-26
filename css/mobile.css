@@ -111,12 +111,16 @@ html {
         font-size: 1.9rem;
     }
     h3 {
-        margin: 1rem 0 .3rem 0;
-        font-size: 1.5rem;
+        margin: 1.5rem 0 .5rem 0;
+        font-size: 1.6rem;
     }
     h4 {
         font-size: 1.3rem;
     }
+    /* h4::before{
+        content: '';
+        color: #0000003f;
+    } */
     a {
         text-decoration: none;
         color: #8c8fd1;
@@ -125,7 +129,7 @@ html {
         color: #626395;
     }
     h5 {
-        margin: .3rem 0 0 0;
+        margin: 0 0 .8rem 0;
         font-size: 1rem;
     }
     .skills-grid {
