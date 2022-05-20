@@ -1,19 +1,6 @@
 @media (min-width: 1024px) {
-    main {
-        display: grid;
-        grid-template-columns: 1fr 2.2fr 1fr;
+    section {
+         grid-template-columns: .8fr 2fr .8fr;
     }
-    .disGrid {
-        grid-area: 1 / 2;
-    }
-    .navbar-light .navbar-nav .nav-link.active {
-        color: var(--accent-color);
-        font-size: 1.4rem;
-        margin-left: 0;
-    }
-    table {
-        border: .2rem solid #111;
-        font-size: 1.8rem;
-        margin: 1.2rem;
-    }
+
 }

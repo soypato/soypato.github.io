@@ -1,32 +1,21 @@
 @media (min-width: 768px) {
-    .features{
-        display: grid;
-        grid-template-columns: 3.5fr 2fr;
-    }
-    .exp:nth-child(1){
-        grid-area: 2 / 2;
-    }
-    .exp:nth-child(2){
-        grid-area: 2 / 1;
-    }
     .basicImg>img {
         display: inline;
-        max-width: 15rem;
+        min-width: 20rem;
         margin: 2rem 0;
-        border-radius: 1rem;
+    }   
+    .navbar{
+       padding: 1.4rem 3rem; 
     }
-    .divNames {
-        grid-area: 2 / 1;
-        margin: auto 0;
-        font-size: 1.2rem;
+    section {
+        grid-template-columns: .3fr 2fr .3fr;
     }
-    .skills h2{
-        font-size: 1.9rem;
-        padding: 0rem 0;
-    }  
-    .skills h3{
-        display: block;
-        padding: 1rem 0;
+    .shortLinks{
+        flex-direction: row;
+        margin: 3rem 0;
     }
-    
+    .linkDescription{
+        margin: 0 1rem;
+    }
+
 }
