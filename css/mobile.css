@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Rubik', sans-serif;}
+    font-family: 'Roboto', sans-serif;}
 
 html {
     font-size: 62.5%;
@@ -44,14 +44,14 @@ html {
         font-size: 1.4rem;
     }
     .navbar-light .navbar-nav .nav-link.active:hover {
-        color: var(--third-color);
+        color: var(--sp-color);
     }
     body {
         background-color: var(--first-color);
         color: var(--accent-color);
     }
     .headerProfile{
-        margin-top: 1rem;
+        margin-top: 6rem;
         margin-bottom: 3rem;
     }
     section {
@@ -87,9 +87,11 @@ html {
     }
     .name {
         font-size: 4rem;
-        margin-top: 1.3rem;
+        margin-top: 1rem;
         margin-bottom: 0.2rem;
         text-align: center;
+        color: var(--sp-color);
+        font-weight: 900;
     }
 
     h1, h2 {
@@ -103,10 +105,11 @@ html {
     }
     h2{
         font-size: 1.9rem;
+        margin-top: 3rem;
 
     }
     h3 {
-        margin: 1.5rem 0 .5rem 0;
+        margin: 1rem 0 2rem 0;
         font-size: 1.6rem;
     }
     h4 {
@@ -115,7 +118,6 @@ html {
     .desc{
         font-size: 1.3rem;
     }
-    
 
     .img-header{
         max-width: 8rem;
@@ -131,17 +133,34 @@ html {
     }
     .footerText{
         text-align: center;
-        margin: 2rem 0; 
+        margin: 5rem 0 3rem 0; 
     }
     .shortLinks{
-        display: flex;
-        flex-direction: column;
+        display: grid;
     }
     .linkDescription{
-        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        box-shadow: rgba(196, 176, 176, 0.2) 0px 2px 8px 0px;
         border-radius: .4rem;
         padding: 2rem;
-        margin: 1rem 0;
+    }
+    .banner{
+        margin: 2rem 0 0 0;
+    }
+    .banner img{
+        max-width: 100%;
+        border-radius: 1rem;
+    }
+    .seeAllButton{
+        display: grid;
+        place-items: center;
+        margin: 3rem 0;
+    }
+    .seeAllButton a{
+        background-color: var(--sp-color);
+        color: var(--first-color);
+        border-radius: 1.3rem;
+        padding: 1rem;
+        font-size: 1.2rem;
     }
 
 }

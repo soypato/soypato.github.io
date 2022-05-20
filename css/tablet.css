@@ -11,11 +11,8 @@
         grid-template-columns: .3fr 2fr .3fr;
     }
     .shortLinks{
-        flex-direction: row;
-        margin: 3rem 0;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     }
-    .linkDescription{
-        margin: 0 1rem;
-    }
+
 
 }

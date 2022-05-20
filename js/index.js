@@ -14,9 +14,10 @@ function getCurrentAge(yearBirth){
     
     let domYear = document.getElementById('domYear');
     let yearFunction = getCurrentAge('Fri Nov 29 2002 00:00:00 GMT-0300 (Argentina Standard Time)');
-    
-    domYear.innerHTML = yearFunction;
-    
+        
+    if(domYear != undefined){
+        domYear.innerHTML = yearFunction;
+    }
 // current year
 let date = new Date();
 let year = date.getFullYear();
