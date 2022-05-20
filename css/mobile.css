@@ -50,10 +50,7 @@ html {
         background-color: var(--first-color);
         color: var(--accent-color);
     }
-    .headerProfile{
-        margin-top: 6rem;
-        margin-bottom: 3rem;
-    }
+
     section {
         display: grid;
         grid-template-columns: .3fr 2fr .3fr;
@@ -61,39 +58,12 @@ html {
     article{
         grid-area: 1 / 2;
     }
-    .nw2 {
-        font-size: 2rem;
-        padding: 0 0 0 1.3rem;
-    }
-
-    .basicImg {
-        display: flex;
-        justify-content: space-around;
-    }
-    .basicImg > img{
-        width: 13.4rem;
-        display: block;
-        margin: auto;
-        border-radius: 10rem;
-        margin-top: 2rem;
-        margin-bottom: 1rem;
-        box-shadow: rgb(0 0 0 / 15%) 0px 8px 24px;
-    }
     p{
         font-size: 1.5rem;
     }
     h1, .desc, .info{
         text-align: center;
     }
-    .name {
-        font-size: 4rem;
-        margin-top: 1rem;
-        margin-bottom: 0.2rem;
-        text-align: center;
-        color: var(--sp-color);
-        font-weight: 900;
-    }
-
     h1, h2 {
         font-weight: 800;
         margin: 2rem 0 1.3rem 0;
@@ -162,5 +132,4 @@ html {
         padding: 1rem;
         font-size: 1.2rem;
     }
-
 }

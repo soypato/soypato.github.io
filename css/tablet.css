@@ -1,9 +1,4 @@
 @media (min-width: 768px) {
-    .basicImg>img {
-        display: inline;
-        min-width: 20rem;
-        margin: 2rem 0;
-    }   
     .navbar{
        padding: 1.4rem 3rem; 
     }
@@ -13,6 +8,4 @@
     .shortLinks{
         grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     }
-
-
 }

@@ -1,0 +1,34 @@
+@media (min-width: 200px) {
+    .basicImg {
+        display: flex;
+        justify-content: space-around;
+    }
+    .headerProfile{
+        margin-top: 6rem;
+        margin-bottom: 3rem;
+    }
+    .basicImg > img{
+        width: 13.4rem;
+        display: block;
+        margin: auto;
+        border-radius: 10rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        box-shadow: rgb(0 0 0 / 15%) 0px 8px 24px;
+    }
+    .name {
+        font-size: 4rem;
+        margin-top: 1rem;
+        margin-bottom: 0.2rem;
+        text-align: center;
+        color: var(--sp-color);
+        font-weight: 900;
+    }
+}
+@media (min-width: 768px){
+    .basicImg>img {
+        display: inline;
+        min-width: 20rem;
+        margin: 2rem 0;
+    }   
+}
