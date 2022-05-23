@@ -93,9 +93,11 @@ html {
     .img-header{
         max-width: 8rem;
     }
-    a {
+    a{
         text-decoration: none;
-        color: #8c8fd1;
+    }
+    a > .seeAllButton > span {
+        color: #fff;
     }
 
     h5 {
@@ -131,10 +133,8 @@ html {
         padding: 1rem;
         font-size: 1.2rem;
     }
-    .seeAllButton a{
-        color: #fff;
-    }
     .seeAllButton:hover{
+        color: var(--first-color);
         background-color: var(--hover-color);
         cursor: pointer;
     }
