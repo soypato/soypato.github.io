@@ -12,8 +12,9 @@ html {
     --first-color: #fff;
     --accent-color: #000000;
     --third-color: #ddd9d9;
-    --hover-color: #f3ebeb;
+    --hover-color: #585bf3;
     --sp-color: #3742bc;
+    --boxColors: rgb(196 176 176 / 40%) 0px 2px 8px 0px;
 }
 
 @media (min-width: 200px) {
@@ -109,7 +110,7 @@ html {
         display: grid;
     }
     .linkDescription{
-        box-shadow: rgba(196, 176, 176, 0.2) 0px 2px 8px 0px;
+        box-shadow: var(--boxColors);
         border-radius: .4rem;
         padding: 2rem;
     }
@@ -124,12 +125,17 @@ html {
         display: grid;
         place-items: center;
         margin: 3rem 0;
-    }
-    .seeAllButton a{
         background-color: var(--sp-color);
         color: var(--first-color);
         border-radius: 1.3rem;
         padding: 1rem;
         font-size: 1.2rem;
+    }
+    .seeAllButton a{
+        color: #fff;
+    }
+    .seeAllButton:hover{
+        background-color: var(--hover-color);
+        cursor: pointer;
     }
 }
