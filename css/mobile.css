@@ -2,10 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;}
+}
 
 html {
     font-size: 62.5%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
 }
 
 :root {
