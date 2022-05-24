@@ -38,6 +38,7 @@ html {
         width: 100%;
         padding: 1.3rem 1rem; 
         background-color: #fff;
+        border-bottom: .1rem solid #d6d1d1;
     }
 
     .navbar-light .navbar-nav .nav-link.active {
@@ -117,7 +118,7 @@ html {
         padding: 2rem;
     }
     .banner{
-        margin: 2rem 0 0 0;
+        margin: 1rem 0 0 0;
     }
     .banner img{
         max-width: 100%;
