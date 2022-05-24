@@ -62,6 +62,9 @@ html {
     article{
         grid-area: 1 / 2;
     }
+    main{
+        margin-top: 6rem;
+    }
     p{
         font-size: 1.5rem;
     }
@@ -120,7 +123,7 @@ html {
         padding: 2rem;
     }
     .banner{
-        margin: 1rem 0 0 0;
+        margin: -5rem 0 0 0;
     }
     .banner img{
         max-width: 100%;
