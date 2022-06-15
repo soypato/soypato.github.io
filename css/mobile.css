@@ -119,6 +119,14 @@ html {
         border-radius: .4rem;
         padding: 2rem;
     }
+    .linkDescription > a > img{
+        border-radius: .8rem;
+        padding: .4rem;
+        width: 100%;
+    }
+    .linkDescription > p{
+        margin-top: -1.3rem;
+    }
     .banner{
         margin: 1rem 0 0 0;
     }
