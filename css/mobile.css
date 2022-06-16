@@ -14,7 +14,7 @@ html {
     --first-color: #fff;
     --accent-color: #000000;
     --third-color: #ddd9d9;
-    --hover-color: #585bf3;
+    --hover: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
     --sp-color: #3742bc;
     --boxColors: rgb(196 176 176 / 40%) 0px 2px 8px 0px;
 }
@@ -140,13 +140,13 @@ html {
         margin: 3rem 0;
         background-color: var(--sp-color);
         color: var(--first-color);
-        border-radius: 1.3rem;
+        border-radius: 1.3rem;  
         padding: 1rem;
         font-size: 1.2rem;
     }
     .seeAllButton:hover{
-        color: var(--first-color);
-        background-color: var(--hover-color);
+        box-shadow: var(--hover);
+        color: #fff;
         cursor: pointer;
     }
 }
