@@ -3,10 +3,11 @@
     .navbar{
        padding: 1.4rem 3rem; 
     }
-    section {
-        grid-template-columns: .3fr 2fr .3fr;
-    }
-    .shortLinks{
+    .gridGallery{
         grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        grid-gap: 1rem;
+    }    
+    #formDollar{
+        grid-area: 1 / 2;
     }
 }
