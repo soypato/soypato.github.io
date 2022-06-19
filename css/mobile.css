@@ -128,10 +128,13 @@ html {
         margin-top: -1.3rem;
     }
     }
+    .imgWithText{
+        margin: 3rem 0 0 0;
+    }
     .banner{
         margin: 2rem 0 0 0;
     }
-    .banner img{
+    .banner img, .imgWithText img{
         max-width: 100%;
         display: block;
         margin-left: auto;
@@ -142,7 +145,7 @@ html {
     .fullWidthButton, .inputSubmit-style{
         display: grid;
         place-items: center;
-        margin: -1rem    0 3rem 0;
+        margin: 2rem 0 3rem 0;
         background-color: var(--brand-color);
         color: var(--first-color);
         border-radius: 1.3rem;
