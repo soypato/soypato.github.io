@@ -1,0 +1,8 @@
+.banner{
+	max-width: 60%;
+	display: block;
+	margin: 0 auto 5rem auto;
+}
+article p{
+    margin: 0 0 2rem 0;
+}

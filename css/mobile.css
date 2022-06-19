@@ -14,9 +14,8 @@ html {
     --first-color: #fff;
     --accent-color: #000000;
     --third-color: #ddd9d9;
-    --hover-color: #585bf3;
-    --sp-color: #3742bc;
-    --boxColors: rgb(196 176 176 / 40%) 0px 2px 8px 0px;
+    --hover: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+    --brand-color: #3742bc;
 }
 
 @media (min-width: 200px) {
@@ -27,6 +26,7 @@ html {
     }
     header {
         width: 100%;
+        position: relative;
         z-index: 100;
         color: var(--first-color);
         border-bottom: var(--third-color);
@@ -48,36 +48,35 @@ html {
         font-size: 1.4rem;
     }
     .navbar-light .navbar-nav .nav-link.active:hover {
-        color: var(--sp-color);
+        color: var(--brand-color);
     }
     body {
         background-color: var(--first-color);
         color: var(--accent-color);
     }
 
-    section {
+    main{
         display: grid;
         grid-template-columns: .3fr 2fr .3fr;
     }
-    article{
+    section{
         grid-area: 1 / 2;
     }
-    main{
-        margin-top: 6rem;
-    }
+
     p{
         font-size: 1.5rem;
     }
     h1, .desc, .info{
         text-align: center;
+        margin-bottom: 1rem;
     }
     h1, h2 {
         font-weight: 800;
-        margin: 2rem 0 1.3rem 0;
+        margin: 3rem 0 1.3rem 0;
         text-align: left;
     }
     h1{
-        font-size: 2.3rem;
+        font-size: 3em;
 
     }
     h2{
@@ -99,11 +98,9 @@ html {
     .img-header{
         max-width: 8rem;
     }
-    a{
+    a {
         text-decoration: none;
-    }
-    a > .seeAllButton > span {
-        color: #fff;
+        color: #8c8fd1;
     }
 
     h5 {
@@ -114,34 +111,95 @@ html {
         text-align: center;
         margin: 5rem 0 3rem 0; 
     }
-    .shortLinks{
+    .gridGallery{
         display: grid;
+        margin: 3rem 0;
     }
-    .linkDescription{
+    .middleGrid{
         box-shadow: var(--boxColors);
-        border-radius: .4rem;
+        border-radius: 0.4rem;
         padding: 2rem;
     }
-    .banner{
-        margin: -5rem 0 0 0;
+    .middleGrid > a > img{
+        border-radius: .8rem;
+        padding: .4rem;
+        width: 100%;
     }
-    .banner img{
+    .middleGrid > p{
+        margin-top: -1.3rem;
+    }
+    }
+    .imgWithText{
+        margin: 3rem 0 0 0;
+    }
+    .banner{
+        margin: 2rem 0 0 0;
+    }
+    .banner img, .imgWithText img{
         max-width: 100%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
         border-radius: 1rem;
     }
-    .seeAllButton{
+
+    .fullWidthButton, .inputSubmit-style{
         display: grid;
         place-items: center;
-        margin: 3rem 0;
-        background-color: var(--sp-color);
+        margin: 2rem 0 3rem 0;
+        background-color: var(--brand-color);
         color: var(--first-color);
         border-radius: 1.3rem;
         padding: 1rem;
         font-size: 1.2rem;
+        border: none;
+        width: 100%;
     }
-    .seeAllButton:hover{
-        color: var(--first-color);
-        background-color: var(--hover-color);
-        cursor: pointer;
+    .fullWidthButton:hover, .inputSubmit-style:hover{
+        box-shadow: var(--hover);
+        color: #fff;
     }
+    .inputSubmit-style{
+        border-radius: 0.5rem;
+        margin: 1rem 0;
+        border: none;
+    }
+    #printButton{       
+        border: none;
+        width: 100%;
+    }
+    #inputPrice{
+        font-weight: 500;
+        text-align: left;
+        border-radius: 1.2rem;
+        border-style: none;
+        font-size: 2.3rem;
+        appearance: none;
+        width: 100%;
+        color: var(--brand-color);
+    }
+    #inputPrice:focus{
+        outline-style: none;
+    }
+    #formDollar{
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-gap: 1rem;
+        margin: 0;
+    }
+    .formGrid{
+        grid-area: 2 / 2;
+    }
+    .results{
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        align-items: center;
+    }
+        
+    .notes p{
+        text-align: center;
+        margin: .4rem 0;
+    }
+
 }

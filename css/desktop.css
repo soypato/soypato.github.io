@@ -1,6 +1,8 @@
 @media (min-width: 1024px) {
-    section {
+    main {
          grid-template-columns: .8fr 2fr .8fr;
     }
-
+    .results span, .results p{
+        font-size: 1.8rem;
+    }
 }
