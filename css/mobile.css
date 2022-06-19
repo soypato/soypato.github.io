@@ -62,6 +62,7 @@ html {
     section{
         grid-area: 1 / 2;
     }
+
     p{
         font-size: 1.5rem;
     }
