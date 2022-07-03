@@ -17,7 +17,6 @@
     }
     .name {
         font-size: 4rem;
-        margin-top: 1rem;
         margin-bottom: 0.2rem;
         text-align: center;
         color: var(--brand-color);

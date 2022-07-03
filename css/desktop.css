@@ -1,4 +1,7 @@
 @media (min-width: 1024px) {
+    .navbar {
+        padding: 1rem 8rem;
+    }
     main {
          grid-template-columns: .8fr 2fr .8fr;
     }
