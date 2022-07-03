@@ -36,7 +36,6 @@ html {
         flex-direction: row-reverse;
     }
     .navbar{
-        position: fixed; 
         top: 0; 
         width: 100%;
         padding: 1.3rem 1rem; 

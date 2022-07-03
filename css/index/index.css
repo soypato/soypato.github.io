@@ -2,7 +2,6 @@
     .basicImg {
         display: flex;
         justify-content: space-around;
-        margin: 7rem 0 -1rem 0;
     }
     .headerProfile{
         margin-bottom: 3rem;
