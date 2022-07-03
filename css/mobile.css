@@ -16,6 +16,7 @@ html {
     --third-color: #ddd9d9;
     --hover: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
     --brand-color: #3742bc;
+    --shadow: rgb(196 176 176 / 40%) 0px 2px 8px 0px;
 }
 
 @media (min-width: 200px) {
@@ -114,11 +115,13 @@ html {
     .gridGallery{
         display: grid;
         margin: 3rem 0;
+        box-shadow: var(--shadow);
     }
     .middleGrid{
         box-shadow: var(--boxColors);
         border-radius: 0.4rem;
         padding: 2rem;
+        box-shadow: var(--shadow);
     }
     .middleGrid > a > img{
         border-radius: .8rem;
