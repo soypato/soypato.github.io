@@ -31,7 +31,7 @@ html {
     }
     .navbar{
         width: 100%;
-        padding: 1rem 3rem;
+        padding: 1.2rem 1.4rem;
         background-color: #fff;
         border-bottom: .1rem solid #d6d1d1;
         position: fixed;
@@ -134,7 +134,7 @@ html {
         display: block;
         margin-left: auto;
         margin-right: auto;
-        border-radius: 1rem;
+        border-radius: .5rem;
     }
 
     .fullWidthButton, .inputSubmit-style{
