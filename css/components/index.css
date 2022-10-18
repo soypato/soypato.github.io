@@ -1,126 +1,166 @@
-.navbar{
+.navbar {
     background-color: var(--brand-color);
-}
-.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link{
+  }
+  .navbar-nav .nav-link.active,
+  .navbar-nav .show > .nav-link {
     color: #fff;
-}
-@media screen and (min-width:200px){
-    #welcome-section{
-        background-color: #121212;
-        height: 100vh;
-        color: #fff;
+  }
+  body{
+    display: flex;
+    flex-direction: column;
+  }
+  @media screen and (min-width: 200px) {
+    #hola-soy-pato > img,
+    #profile {
+      border-radius: 100rem;
+      display: block;
     }
-    #basic-info{
-        display: block;
-        position: relative;
-        top: 2rem;
-        margin: auto;
-        width: 82vw;
-        display: grid;
-        grid-template-rows: .5fr .5fr .2fr .2fr .5fr;
-        grid-column-gap: 10px;
-
+   .borderArticle{
+        border-bottom: 0.1rem solid #363333;
     }
-    #basic-info > *{
-        display: block;
-        margin: auto 0;
-        font-weight: 600;
+    #welcome-section {
+      background-color: #121212;
+      height: 100vh;
+      color: #fff;
+      flex-grow: 1;
     }
-    #profile{
-        display: block;
-        margin: auto;
-        padding: 1.2rem;
-        border-radius: 100rem;
-        max-width: 15rem;
-        padding: 1rem;
-        grid-area: 1 / 1 / 6 / 2;
+    #basic-info {
+      display: block;
+      position: relative;
+      top: 2rem;
+      margin: auto;
+      width: 82vw;
+      display: grid;
+      grid-template-rows: 0.5fr 0.5fr 0.2fr 0.2fr 0.5fr;
+      grid-column-gap: 10px;
     }
-    h1{
-        grid-area: 2 / 2 / 3 / 3; 
-        font-size: 3rem;
-        font-weight: 700;
+    #basic-info > * {
+      display: block;
+      margin: auto 0;
+      font-weight: 600;
     }
-    #basic-info-description-1, #basic-info-description-2{
-        font-size: 1rem;
+    #profile {
+      margin: auto;
+      padding: 1rem;
+      max-width: 15rem;
+      grid-area: 1/1/6/2;
     }
-    #basic-info-description-1{
-        grid-area: 3 / 2;
+    h1 {
+      grid-area: 2/2/3/3;
+      font-size: 3rem;
+      font-weight: 700;
     }
-    #basic-info-description-2{
-        grid-area: 4 / 2;
+    #basic-info-description-1,
+    #basic-info-description-2 {
+      font-size: 1rem;
     }
-    #folder{
-        margin-top: 3rem;
-        display: grid;
-        margin: 5rem auto;
-        grid-template-rows: repeat(2, 1fr);
-        grid-template-columns: repeat(2, .5fr);
-        grid-row-gap: 2rem;
-        padding: 1.5rem;
-        place-items: center;
-        }
-    .folder-component > a > img{
-        width: 17rem;
-        border-radius: 1rem; 
-        margin-bottom: .5rem;
+    #basic-info-description-1 {
+      grid-area: 3/2;
     }
-    .folder-component > a > h2{
-        margin-top: 1rem;
-        font-size: 1.4;
-        color: #fff;
+    #basic-info-description-2 {
+      grid-area: 4/2;
     }
-    #my-info-grid{
-        display: grid;
-        grid-template-columns: 3.5fr 1fr 3.5fr;
-        grid-template-rows: 1fr 1fr 3fr;
-        height: 100vh;
-        background-color: #1e1c1c;
+    #folder {
+      display: grid;
+      margin: 5rem auto;
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: repeat(2, 0.5fr);
+      grid-row-gap: 2rem;
+      padding: 1.5rem;
+      place-items: center;
     }
-    #hola-soy-pato{
-        margin-top: 5rem;
-        display: grid;
-        grid-area: 1 / 2;
+    .folder-component > a > img {
+      width: 17rem;
+      border-radius: 1rem;
+      margin-bottom: 0.5rem;
     }
-    #hola-soy-pato > *{
-        color: #fff;
+    .folder-component > a > h2 {
+      margin-top: 1rem;
+      font-size: 1.4;
+      color: #fff;
     }
-    #hola-soy-pato > h2{
-        font-size: 4rem;
-        font-weight: 700;
-        margin-bottom: 2rem;
+    #my-info-grid {
+      display: grid;
+      grid-template-columns: 1fr 3.5fr 1fr;
+      grid-template-rows: 1fr;
+      height: 100vh;
+      background-color: #1e1c1c;
+      flex-grow: 1;
     }
-    #hola-soy-pato > p{
-        font-size: 1.4rem;
+    #hola-soy-pato {
+      padding-top: 8rem;
+      grid-area: 1/2;
     }
-    #hola-soy-pato > img{
-        max-width: 90vw;
-        padding: 3rem;
-        border-radius: 100rem;
+    #hola-soy-pato > * {
+      color: #fff;
     }
-}
-@media screen and (min-width:768px) {
-    #basic-info{
-        width: 50rem;
+    #hola-soy-pato > h2 {
+      font-size: 4rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
     }
-    h1{
-        font-size: 4rem;
+    #hola-soy-pato > p {
+      font-size: 1.6rem;
     }
-    #basic-info-description-1, #basic-info-description-2{
-        font-size: 1.2rem;
+    #hola-soy-pato > img {
+      margin: auto;
+      max-width: 65vw;
+      padding: 3rem;
     }
-    #folder{
-        width:70rem;
-        grid-gap: 2rem;
+  }
+  @media screen and (min-width: 768px) {
+    #basic-info {
+      width: 50rem;
     }
-    .folder-component > a > h2{
-        font-size: 2rem;
+    h1 {
+      font-size: 4rem;
     }
-    .folder-component > a > img{
-        width: 30rem;
+    #basic-info-description-1,
+    #basic-info-description-2 {
+      font-size: 1.2rem;
     }
-}
-@media screen and (min-width:1024px){
-#folder{
-    grid-gap: 3rem;
-}
-}
+    #folder {
+      width: 70rem;
+      grid-gap: 2rem;
+    }
+    .folder-component > a > h2 {
+      font-size: 2rem;
+    }
+    .folder-component > a > img {
+      width: 30rem;
+    }
+    #my-info-grid {
+      grid-area: 2/2;
+      grid-template-columns: 1fr 5fr 1fr;
+    }
+    #hola-soy-pato > img {
+      max-width: 35rem;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    #folder {
+      grid-gap: 3rem;
+    }
+    #my-info-grid {
+      grid-template-columns: 1fr 5fr 1fr;
+      height: 70vh;
+    }
+    #hola-soy-pato {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 0.1fr 0.1fr 0.2fr;
+    }
+    #hola-soy-pato > h2 {
+      grid-area: 1/1;
+    }
+    #info-text-1 {
+      grid-area: 2/1;
+    }
+    #info-text-2 {
+      grid-area: 3/1;
+    }
+    #hola-soy-pato > img {
+      grid-area: 1/2/4/2;
+      transform: translateY(-3rem);
+    }
+  }
