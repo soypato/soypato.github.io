@@ -8,79 +8,84 @@
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">       
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
       <link rel="stylesheet" href="css/mobile.css">
       <link rel="stylesheet" href="css/tablet.css">
       <link rel="stylesheet" href="css/desktop.css">
-      <link rel="stylesheet" href="css/index/index.css">
-      <link rel="stylesheet" href="css/extras.css">
+      <link rel="stylesheet" href="css/components/index.css">
       <meta name="description" content="Programador orientado al desarrollo de aplicaciones web. Una gran afición por nunca parar de aprender y nutrirme de conocimiento. ">
       <meta name="keywords" content="desarrollo web, programación, portfolio, aprendizaje, Argentina, front-end, HTML, CSS, JavaScript, soypato, pato tb, soypatotb, editor, video, marketing, criptomonedas, redes, youtube, twitch">
       <title>Patricio Tubio (soypato)</title>
    </head>
    <body>
       <header>
-         <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid">
-               <a class="navbar-brand" href="index.html">
-               <img class="img-header" src="https://i.postimg.cc/YSjMWf70/text2952.webp" alt="soypato logo"></img>
-               </a>
-               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-               <span class="navbar-toggler-icon"></span>
-               </button>
-               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                  <div class="navbar-nav">
-                     <a class="nav-link active navCurrentPages" href="proyectos.html">Proyectos</a>
-                     <a class="nav-link active navCurrentPages" href="contacto.html">Contacto</a>
-                  </div>
-               </div>
-            </div>
-         </nav>
-      </header>
-      <main>
-         <section>
-            <div class="headerProfile">
-            <div>
-               <div class="basicImg">
-                  <img src="https://avatars.githubusercontent.com/u/77248407?s=400&u=fc155af948372209d550a574942c5b77787ea959&v=4" alt="patricio tubio, soypato, rostro, cara">
-               </div>
-               <div class="divNames">
-                  <p class="name">Patricio Tubio
-                  <p class="desc">Desarrollador web, creador de contenido.</p>
-                  <p class="info"><span id="domYear"></span> años. Mar del Plata, Argentina.</p>
-                  </a>
-               </div>
-            </div>
+         <nav class="navbar navbar-expand-lg static-top">
+         <div class="container">
+         <a class="navbar-brand" href="index.html">
+            <img src="https://i.postimg.cc/7Yn7kv4V/logo-soypato-max.png" alt="soypato logo">
+         </a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+               <li class="nav-item">
+               <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="proyectos.html">Proyectos</a>
+                  </li>
+               <li class="nav-item">
+               <a class="nav-link active" href="contacto.html">Contacto</a>
+               </li>
+            </ul>
          </div>
-            <article>
-               <h1>Hola, soy Pato</h1>
-               <p>📰 Soy generalista y creativo. Si bien mi foco es el desarrollo web, poseo gran experencia en otras áreas computacionales debido a mi trayecto autodidacta de hace varios años. Mi meta es desarrollar soluciones para la industria (y la humanidad 🚀).</p>
-               <p>📰 También realizo transmisiones en vivo y creo  contenido para redes sociales con el objetivo de brindar entretenimiento y conocimiento a la audiencia, bajo mi marca perosonal "SoyPato".</p>
-               <h2>Enlaces útiles</h2>
-               <p>📰 Si querés conocer más sobre mí, no dudes en cliquear debajo 💙.</p>
-               <div class="gridGallery">
-                  <div class="middleGrid">
-                     <h3><a href="./proyectos.html">Proyectos de programación</a></h3>
-                     <p>Mis proyectos y soluciones en la industria.</p>
-                  </div>
-                  <div class="middleGrid">
-                     <h3><a href="https://www.linkedin.com/in/soypato">Linkedin</a></h3>
-                     <p>Mi experiencia profesional y educativa.</p>
-                  </div>
-                  <div class="middleGrid">
-                     <h3><a href="./contacto.html">Contacto</a></h3>
-                     <p>Si querés comunicarte conmigo de forma directa.</p>
-                  </div>
-               </div>
-               </div>
+         </div>
+      </nav>
+      </header>
+      <section id="welcome-section">
+         <div id="basic-info">
+            <img id="profile" src="https://avatars.githubusercontent.com/u/77248407?" alt="patricio tubio">
+            <h1>Patricio Tubio</h1>
+            <p id="basic-info-description-1">desarrollador web • creador de contenido</p>
+            <p id="basic-info-description-2"> <span id="domYear"></span> años • mar del plata, argentina</p>
+         </div>
+         <div id="folder">
+            <article class="folder-component">
+               <a href="#">
+                  <img src="img/soypato-portada.webp" alt="portada de la descripción de Patricio Tubio" >
+                  <h2>📁 sobre mí</h2>
+               </a>
             </article>
-         </section>
-      </main>
-      <footer>
-         <p class="footerText"><span id="currentYear"></span><a href="https://soypato.github.io/"> • Patricio Tubio (soypato).</a>
-         <p>
-      </footer>
-      <script src="js/index.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+            <article class="folder-component">
+               <a href="#">
+                  <img src="img/proyectos-portada.webp" alt="portada de la sección de proyectos de programación" >
+                  <h2>📁 proyectos</h2>
+               </a>
+            </article>
+            <article class="folder-component">
+               <a href="#">
+                 <img src="img/presentaciones-portada.webp" alt="portada de la sección de presentaciones" >
+                 <h2>📁 presentaciones</h2>
+               </a>
+            </article>
+            <article class="folder-component">
+               <a href="#">
+                  <img src="img/contacto-portada.webp" alt="portada de contacto" >
+                  <h2>📁 presentaciones</h2>
+               </a>
+            </article>
+         </div>
+      </section>
+      <div id="my-info-grid">
+         <article id="hola-soy-pato">
+            <h2>Hola, soy Pato</h2>
+            <p>📰 Soy generalista y creativo. Mi foco es el desarrollo web, sin embargo poseo gran experencia en otras áreas computacionales debido a mi trayecto autodidacta de hace varios años. Mi meta es desarrollar soluciones para la industria (y la humanidad 🚀).</p>
+            <p>📰 También realizo transmisiones en vivo y creo contenido para redes sociales con el objetivo de brindar entretenimiento y conocimiento a la audiencia, bajo mi marca perosonal "SoyPato".</p>
+            <img src="img/patriciotubio.webp" alt="">
+         </article>
+      </div>
+      <script src="./js/index.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
    </body>
 </html>

@@ -1,9 +1,0 @@
-@media (min-width: 768px) {
-    .gridGallery{
-        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-        grid-gap: 1rem;
-    }    
-    #formDollar{
-        grid-area: 1 / 2;
-    }
-}
