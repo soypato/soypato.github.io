@@ -22,6 +22,10 @@ a{
     width: 100%;
     top: 0;
 }
+h2{
+    font-size: 4rem;
+    font-weight: 700;
+}
 
 .navbar-brand > img{
     width: 12rem;
@@ -34,5 +38,60 @@ a{
 @media screen and (min-width:200px) {
     header > .container{
         max-width: none;
+    }
+    .main-grid-articles{
+        display: grid;
+        grid-template-columns: 1fr 5fr 1fr;
+    }
+    .main-grid-articles > article{
+        grid-area: 1 / 2;
+    }
+    .description-p{
+        font-size: 1.7rem;
+    }
+    .gridGallery{
+        display: grid;
+    }
+    .middleGrid{
+        box-shadow: var(--boxColors);
+        border-radius: 0.4rem;
+        padding: 2rem;
+        box-shadow: var(--shadow);
+    }
+    .middleGrid > a > img{
+        border-radius: .8rem;
+        padding: .4rem;
+        width: 100%;
+    }
+    .middleGrid > p{
+        margin-top: -1.3rem;
+    }
+    .middleGrid > a > h3{
+        color: #000;
+        padding-top: 1rem;
+        line-height: 2.3rem;
+        font-size: 1.7rem;
+    }
+    .middleGrid > p{
+        padding-top: 1.5rem;
+        font-size: 1.2rem;
+    }
+    .fullWidthButton, .inputSubmit-style {
+        display: grid;
+        place-items: center;
+        margin: 2rem 0 3rem 0;
+        background-color: var(--brand-color);
+        color: var(--first-color);
+        border-radius: 1.3rem;
+        padding: 1rem;
+        font-size: 1.2rem;
+        border: none;
+        width: 100%;
+        margin-bottom: 5rem;
+        color: #fff;
+
+    }
+    .fullWidthButton:hover{
+        color: #fff;
     }
 }
