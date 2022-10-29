@@ -28,10 +28,15 @@ a{
     color: #fff;
     font-size: 1.4rem;
 }
+h1, h2{
+    font-weight: 700;
+    margin-top: 1.7rem;
+}
+h1{
+    font-size: 5rem;
+}
 h2{
     font-size: 4rem;
-    font-weight: 700;
-    margin-top: 2rem;
 }
 
 .navbar-brand > img{
@@ -46,6 +51,7 @@ h2{
     main{
         display: grid;
         grid-template-columns: 1fr 5fr 1fr;
+        min-height  : 100vh;
     }
     main > article{
         grid-area: 1 / 2;
@@ -56,9 +62,6 @@ h2{
     img{
         border-radius: 0.4rem;
         max-width: 100%;
-    }
-    .post-img{
-        margin: 3rem 0;
     }
     .description-p{
         font-size: 1.7rem;
@@ -110,7 +113,16 @@ h2{
         background-color: var(--hover-color);
     }
     footer{
+        display: grid;
+        grid-template-columns: 1fr 5fr 1fr;
         background-color: #1e1c1c;
+        color: #fff;
+        border-top: 0.1rem solid #363333;
+    }
+    footer > article{
+        grid-area: 2 / 2;
+    }
+    footer > article > .gridGallery > .middleGrid > a > h3{
         color: #fff;
     }
 }
