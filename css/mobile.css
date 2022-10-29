@@ -19,38 +19,46 @@ a{
     text-decoration: none;
 }
 .navbar{
-    background-color: #fff;
+    background-color: var(--brand-color);
     z-index: 100;
     width: 100%;
     top: 0;
 }
-h2{
-    font-size: 4rem;
-    font-weight: 700;
+.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link{
+    color: #fff;
+    font-size: 1.4rem;
 }
 h2{
     font-size: 4rem;
     font-weight: 700;
+    margin-top: 2rem;
 }
 
 .navbar-brand > img{
     width: 12rem;
     padding: 1rem;
 }
-.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link{
-    color: #000;
-    font-size: 1.4rem;
-}
+
 @media screen and (min-width:200px) {
     header > .container{
         max-width: none;
     }
-    .main-grid-articles{
+    main{
         display: grid;
         grid-template-columns: 1fr 5fr 1fr;
     }
-    .main-grid-articles > article{
+    main > article{
         grid-area: 1 / 2;
+    }
+    main > article > p{
+        font-size: 1.8rem;
+    }
+    img{
+        border-radius: 0.4rem;
+        max-width: 100%;
+    }
+    .post-img{
+        margin: 3rem 0;
     }
     .description-p{
         font-size: 1.7rem;

@@ -50,6 +50,13 @@
       font-size: 3rem;
       font-weight: 700;
     }
+    .main-grid-articles{
+        display: grid;
+        grid-template-columns: 1fr 5fr 1fr;
+    }
+    .main-grid-articles > article{
+        grid-area: 1 / 2;
+    }
     #basic-info-description-1,
     #basic-info-description-2 {
       font-size: 1rem;
@@ -182,6 +189,9 @@
     #my-info-grid {
       grid-template-columns: 1fr 5fr 1fr;
       height: 70vh;
+    }
+    h2{
+      margin-top: 1rem;
     }
     #hola-soy-pato {
       display: grid;
