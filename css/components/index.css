@@ -20,7 +20,7 @@
     }
     #welcome-section {
       background-color: #121212;
-      height: 100vh;
+      height: 110vh;
       color: #fff;
       flex-grow: 1;
     }
@@ -74,19 +74,20 @@
       border-radius: 1rem;
       margin-bottom: 0.5rem;
     }
-    .folder-component > a > h2 {
+    .folder-component > a > .folder-component-text {
       margin-top: 1rem;
-      font-size: 1.4;
+      font-size: 1.4rem;
       color: #fff;
     }
     #my-info-grid {
       display: grid;
       grid-template-columns: 1fr 3.5fr 1fr;
       grid-template-rows: 1fr;
-      height: 100vh;
+      height: 130vh;
       background-color: #1e1c1c;
       flex-grow: 1;
     }
+
     #hola-soy-pato {
       padding-top: 8rem;
       grid-area: 1/2;
@@ -94,7 +95,7 @@
     #hola-soy-pato > * {
       color: #fff;
     }
-    #hola-soy-pato > h2 {
+    #hola-soy-pato > .folder-component-text {
       font-size: 4rem;
       font-weight: 700;
       margin-bottom: 2rem;
@@ -106,6 +107,23 @@
       margin: auto;
       max-width: 65vw;
       padding: 3rem;
+    }
+    #my-info-grid > #folder{
+      grid-area: 1 / 2;
+    }
+    #proyectos, #conf{
+      background-color: #121212;
+      color: #fff;
+    }
+    #contacto{
+      background-color: #1e1c1c;
+      color: #fff;
+    }
+    .main-grid-articles > article{
+      padding-top: 5em;
+  }
+    .middleGrid > a > h3{
+      color: #fff;
     }
   }
   @media screen and (min-width: 768px) {
@@ -123,7 +141,7 @@
       width: 70rem;
       grid-gap: 2rem;
     }
-    .folder-component > a > h2 {
+    .folder-component > a > .folder-component-text {
       font-size: 2rem;
     }
     .folder-component > a > img {
@@ -132,10 +150,12 @@
     #my-info-grid {
       grid-area: 2/2;
       grid-template-columns: 1fr 5fr 1fr;
+      height: 100vh;
     }
     #hola-soy-pato > img {
       max-width: 35rem;
     }
+
   }
   @media screen and (min-width: 1024px) {
     #folder {
@@ -163,4 +183,5 @@
       grid-area: 1/2/4/2;
       transform: translateY(-3rem);
     }
+
   }
