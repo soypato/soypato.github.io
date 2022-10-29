@@ -28,6 +28,10 @@ h2{
     font-size: 4rem;
     font-weight: 700;
 }
+h2{
+    font-size: 4rem;
+    font-weight: 700;
+}
 
 .navbar-brand > img{
     width: 12rem;
@@ -96,5 +100,9 @@ h2{
     .fullWidthButton:hover{
         color: #fff;
         background-color: var(--hover-color);
+    }
+    footer{
+        background-color: #1e1c1c;
+        color: #fff;
     }
 }

@@ -70,7 +70,7 @@
       place-items: center;
     }
     .folder-component > a > img {
-      width: 17rem;
+      width: 20rem;
       border-radius: 1rem;
       margin-bottom: 0.5rem;
     }
@@ -87,7 +87,9 @@
       background-color: #1e1c1c;
       flex-grow: 1;
     }
-
+    h3:hover{
+      color: #fafafa;
+    }
     #hola-soy-pato {
       padding-top: 8rem;
       grid-area: 1/2;
@@ -125,6 +127,22 @@
     .middleGrid > a > h3{
       color: #fff;
     }
+    footer{
+      display: flex;
+      justify-content: space-around;
+      background-color: #1e1c1c;
+    }
+    footer > p{
+      display: block;
+      font-size: 1.4rem;
+      margin-top: 1rem;
+    }
+  }
+  @media screen and (min-width: 560px) {
+    .folder-component > a > img {
+      width: 25rem;
+    }
+
   }
   @media screen and (min-width: 768px) {
     #basic-info {
@@ -182,6 +200,7 @@
     #hola-soy-pato > img {
       grid-area: 1/2/4/2;
       transform: translateY(-3rem);
+      transform: translateX(10rem);
     }
 
   }
