@@ -90,7 +90,7 @@
       display: grid;
       grid-template-columns: 1fr 3.5fr 1fr;
       grid-template-rows: 1fr;
-      height: 130vh;
+      height: 110rem;
       background-color: #1e1c1c;
       flex-grow: 1;
     }
@@ -177,7 +177,7 @@
     #my-info-grid {
       grid-area: 2/2;
       grid-template-columns: 1fr 5fr 1fr;
-      height: 100vh;
+      height: 82rem;
     }
     #hola-soy-pato > img {
       max-width: 35rem;
@@ -190,7 +190,7 @@
     }
     #my-info-grid {
       grid-template-columns: 1fr 5fr 1fr;
-      height: 70vh;
+      height: 60rem;
     }
     h2{
       margin-top: -1rem;
