@@ -88,7 +88,7 @@
       display: grid;
       grid-template-columns: 1fr 3.5fr 1fr;
       grid-template-rows: 1fr;
-      background-color: #1e1c1c;
+      background-color: #1e1c1c
     }
     h3:hover{
       color: #fafafa;
@@ -184,14 +184,15 @@
       grid-gap: 3rem;
     }
     #my-info-grid {
-      grid-template-columns: 1fr 5fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+      
     }
     h2{
       margin-top: -1rem;
+      margin-bottom: 1rem;
     }
     #hola-soy-pato {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
       grid-template-rows: 0.1fr 0.1fr 0.2fr;
     }
     #hola-soy-pato > h2 {
