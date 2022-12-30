@@ -88,7 +88,9 @@
       display: grid;
       grid-template-columns: 1fr 3.5fr 1fr;
       grid-template-rows: 1fr;
-      background-color: #1e1c1c
+      background-color: #1e1c1c;
+      background-image: linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)),url(../../img/banner.webp);
+      object-fit: contain;
     }
     h3:hover{
       color: #fafafa;
