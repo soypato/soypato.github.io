@@ -174,7 +174,7 @@
     }
     #my-info-grid {
       grid-area: 2/2;
-      grid-template-columns: 1fr 5fr 1fr;
+      grid-template-columns: 1fr 10.5fr 1fr;
     }
     #hola-soy-pato > img {
       max-width: 35rem;
@@ -190,7 +190,6 @@
       
     }
     h2{
-      margin-top: -1rem;
       margin-bottom: 1rem;
     }
     #hola-soy-pato {
