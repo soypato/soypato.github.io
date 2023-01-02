@@ -26,3 +26,27 @@ let footerYear = document.getElementById('currentYear');
     
 footerYear.innerHTML += year;
 
+
+const images = document.querySelectorAll('#proyectos');
+
+const options = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.1
+};
+
+const observer = new IntersectionObserver(handleIntersect, options);
+images.forEach(image => {
+  observer.observe(image);
+});
+
+function handleIntersect(entries, observer) {
+  entries.forEach(entry => {
+    if (entry.intersectionRatio > 0) {
+      const image = entry.target;
+      image.src = image.dataset.src;
+      observer.unobserve(image);
+    }
+  });
+}
+
