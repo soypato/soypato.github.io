@@ -199,12 +199,7 @@
     #hola-soy-pato > h2 {
       grid-area: 1/1;
     }
-    #info-text-1 {
-      grid-area: 2/1;
-    }
-    #info-text-2 {
-      grid-area: 3/1;
-    }
+
     #hola-soy-pato > img {
       grid-area: 1/2/4/2;
       transform: translateY(-3rem);
