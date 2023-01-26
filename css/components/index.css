@@ -19,7 +19,7 @@
         border-bottom: 0.1rem solid #363333;
     }
     #welcome-section {
-      background-color: #121212;
+      background-color: #050505;
       color: #fff;
     }
     #basic-info {
@@ -89,7 +89,7 @@
       grid-template-columns: 1fr 3.5fr 1fr;
       grid-template-rows: 1fr;
       background-color: #1e1c1c;
-      background-image: linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)),url(../../img/banner.webp);
+      background-image: linear-gradient(rgba(0,0,0,.9),rgba(0,0,0,.9)),url(../../img/banner.webp);
       object-fit: contain;
     }
     h3:hover{
