@@ -118,7 +118,7 @@
     #my-info-grid > #folder{
       grid-area: 1 / 2;
     }
-    #proyectos, #conf{
+    #tecnologias, #proyectos, #conf{
       background-color: #121212;
       color: #fff;
     }
