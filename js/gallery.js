@@ -123,6 +123,87 @@ const proyectos = [
     }
 ];
 
+const conferences = [
+    {
+        "image": {
+            "src": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/d5d21a5d62e16fe6c131_soypato_19830465946_2014052701/thumb/custom-25dc52a3-be32-40df-b5c5-4a0409610145-320x180.png",
+            "alt": "Miniatura de clase de código"
+        },
+        "name": "Clase introductoria de programación",
+        "description": "Clase introductoria de lógica de programación y sistemas.",
+        "buttons": [
+            {
+                "name": "Ver Clase",
+                "link": "https://www.twitch.tv/videos/2078610954"
+            },  
+            {
+                "name": "Temario",
+                "link": "https://mdputneduar-my.sharepoint.com/:w:/g/personal/patriciotubio_estudiante_mdp_utn_edu_ar/EX1Uc0SDQj1NjsqlGu75INQBQB8T2_F3f4prz3-IwWYW8A"
+            }
+        ]
+    },
+    {
+        "image": {
+            "src": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/22e2c462f423e5102e5e_soypato_33175249687_9860609536/thumb/custom-11723de6-0580-4fb2-a495-62f23b556d3d-320x180.png",
+            "alt": "Miniatura: Optimizar Windows"
+        },
+        "name": "Optimización de Windows",
+        "description": "Utilizamos scripts de debloating y personalización en Windows.",
+        "buttons": [
+            {
+                "name": "Ver Clase",
+                "link": "https://www.twitch.tv/videos/1712538272"
+            }
+        ]
+    },
+    {
+        "image": {
+            "src": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/9740dc4adbcdb11b5fe3_soypato_22117433040_1801466352/thumb/custom-7adb0597-9a7e-46cc-9477-88bbb1a7fdeb-320x180.png",
+            "alt": "web scraping, hacking, instagram, osintgram, osint, hacking etico, soypato"
+        },
+        "name": "Scraping y OSINT ético en Instagram",
+        "description": "Clase educativa hacking en Instagram con Osintgram en Linux.",
+        "buttons": [
+            {
+                "name": "Ver Clase",
+                "link": "https://www.twitch.tv/videos/1619106308"
+            }
+        ]
+    },
+    {
+        "image": {
+            "src": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/ad4dc23b3e324e18934c_soypato_58895367835_9739168497/thumb/custom-019d469d-f8f1-42f1-9feb-8761cad03b05-320x180.png",
+            "alt": "inteligencia artificial, foto, soypato"
+        },
+        "name": "DALL·E: Inteligencia Artificial a fotos",
+        "description": "Presentación de DALL·E, repercusiones y vistazo a la IA.",
+        "buttons": [
+            {
+                "name": "Ver Presentación",
+                "link": "https://www.twitch.tv/videos/1503142718?filter=highlights&sort=time"
+            }
+        ]
+    },
+    {
+        "image": {
+            "src": "https://static-cdn.jtvnw.net/cf_vods/d2nvs31859zcd8/c4d53b5c00e4486aea5b_soypato_11673922893_9962255400/thumb/custom-d945b667-27ea-4587-b5a9-247d2a74585d-320x180.png",
+            "alt": "miniatura de pizarra con explicación, soypato"
+        },
+        "name": "Guía básica sobre contraseñas",
+        "description": "Cómo proteger nuestros datos en internet.",
+        "buttons": [
+            {
+                "name": "Ver Guía",
+                "link": "https://www.twitch.tv/videos/1476174774?filter=highlights&sort=time"
+            }
+        ]
+    }
+]
+
+
+
+
+
 function generarGaleria(proyectos) {
     const galeriaContainer = document.createElement('div');
     galeriaContainer.classList.add('gridGallery');
@@ -173,6 +254,10 @@ function generarGaleria(proyectos) {
     return galeriaContainer;
 }
 
-const galeria = generarGaleria(proyectos);
-const gridGalleryContainer = document.querySelector('.gridGallery');
-gridGalleryContainer.appendChild(galeria);
+const galeriaProjects = generarGaleria(proyectos);
+const gridGalleryContainer = document.getElementById('gridGalleryProjects');
+gridGalleryContainer.appendChild(galeriaProjects);
+
+const galeriaConferences = generarGaleria(conferences);
+const gridGalleryContainerConferences = document.getElementById('gridGalleryConferences');
+gridGalleryContainerConferences.appendChild(galeriaConferences);
