@@ -9,7 +9,7 @@ html{
 }
 :root{
     --brand-color: #3742bc;
-    --secondary-color: #7730C9;
+    --secondary-color: #232c7a;
     --hover-color: #3742bc;
 }
 body{
@@ -39,6 +39,12 @@ h2{
     font-size: 3rem;
 }
 
+h3
+{
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+
 .navbar-brand > img{
     width: 12rem;
     padding: 1rem;
@@ -63,36 +69,7 @@ h2{
         border-radius: 0.4rem;
         max-width: 100%;
     }
-    .description-p{
-        font-size: 1.7rem;
-    }
-    .gridGallery{
-        display: grid;
-    }
-    .middleGrid{
-        box-shadow: var(--boxColors);
-        border-radius: 0.4rem;
-        padding: 2rem;
-        box-shadow: var(--shadow);
-    }
-    .middleGrid > a > img{
-        border-radius: .8rem;
-        padding: .4rem;
-        width: 100%;
-    }
-    .middleGrid > p{
-        margin-top: -1.3rem;
-    }
-    .middleGrid > a > h3{
-        color: #000;
-        padding-top: 1rem;
-        line-height: 2.3rem;
-        font-size: 1.7rem;
-    }
-    .middleGrid > p{
-        padding-top: 1.5rem;
-        font-size: 1.2rem;
-    }
+
     .fullWidthButton, .inputSubmit-style {
         display: grid;
         place-items: center;
