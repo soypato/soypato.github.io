@@ -69,7 +69,7 @@ const proyectos = [
             "title": "Página principal de CountryCodeFinder"
         },
         "name": "CountryCodeFinder",
-        "description": "Buscador de países en base a su código de área. Hecho en Flask y SQL.",
+        "description": "Buscador de países en base a su código de área. Hecho en Flask y SQL. Proyecto final para Harvard CS50.",
         "buttons": [
             {
                 "name": "Código",
