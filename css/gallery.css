@@ -1,0 +1,163 @@
+.gridGallery {
+    display: grid;
+    margin-bottom: 3rem;
+}
+
+/* Div general de tarjeta */
+
+.middleGrid {
+    box-shadow: var(--boxColors);
+    border-radius: 0.4rem;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    background: #ffffff05;
+    border: .1rem solid #ffffff18;
+    margin: 1rem;
+}
+
+.middleGrid>a>img {
+    border-radius: .8rem;
+    padding: .4rem;
+    width: 100%;
+}
+
+.middleGrid>p {
+    margin-top: -1.3rem;
+}
+
+.middleGrid>a>h3 {
+    line-height: 2.3rem;
+    font-size: 1.7rem;
+}
+
+.middleGrid>p {
+    padding-top: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.middleGrid>a>h3 {
+    color: #fff;
+}
+
+.middleGrid>img {
+    margin-bottom: 2rem;
+}
+
+
+/* Botones del grid de proyectos */
+
+.middleGridButtons {
+    display: flex;
+    gap: 1rem;
+}
+
+.middleGridButtons>a {
+    margin-bottom: 0;
+}
+
+.middleGridButtons>a>span {
+    font-size: 1.3rem;
+}
+
+footer>article>.gridGallery>.middleGrid>a>h3 {
+    color: #fff;
+}
+
+@media screen and (min-width: 200px) {
+    .middleGrid>a>img {
+        width: 1600px;
+        height: 117px;
+        object-fit: cover;
+        aspect-ratio: 16/9;
+        object-position: center;
+    }
+}
+
+@media screen and (min-width: 200px) {
+    header>.container {
+        max-width: none;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr 5fr 1fr;
+        min-height: 100vh;
+    }
+
+
+    .main-grid-articles {
+        display: grid;
+        grid-template-columns: 1fr 5fr 1fr;
+        background-color: #1e1c1c;
+        color: #fff;
+    }
+}
+
+.main-grid-articles>article {
+    grid-area: 1 / 2;
+}
+
+main>article {
+    grid-area: 1 / 2;
+}
+
+main>article>p {
+    font-size: 1.8rem;
+}
+
+img {
+    border-radius: 0.4rem;
+    max-width: 100%;
+}
+
+
+.main-grid-articles>article {
+    padding-top: 5em;
+}
+
+.fullWidthButton,
+.inputSubmit-style {
+    display: grid;
+    place-items: center;
+    margin: 2rem 0 3rem 0;
+    background-color: var(--secondary-color);
+    color: var(--first-color);
+    border-radius: 1.3rem;
+    padding: 1rem;
+    font-size: 1.7rem;
+    border: none;
+    width: 100%;
+    margin-bottom: 5rem;
+    color: #fff;
+}
+
+.fullWidthButton:hover {
+    color: #fff;
+    background-color: var(--hover-color);
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    background-color: #1e1c1c;
+    color: #fff;
+    border-top: 0.1rem solid #363333;
+}
+
+footer>article {
+    grid-area: 2 / 2;
+}
+
+footer>article>.gridGallery>.middleGrid>a>h3 {
+    color: #fff;
+}
+
+.footer-description > article > h2
+{
+    font-size: 3rem;
+}
+
+.footer-description > article > p
+{
+    font-size: 1.5rem;
+}

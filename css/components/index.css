@@ -59,15 +59,6 @@ body {
     font-weight: 700;
   }
 
-  .main-grid-articles {
-    display: grid;
-    grid-template-columns: 1fr 5fr 1fr;
-  }
-
-  .main-grid-articles>article {
-    grid-area: 1 / 2;
-  }
-
   #basic-info-description-1,
   #basic-info-description-2 {
     font-size: 1rem;
@@ -138,76 +129,10 @@ body {
     color: #fff;
   }
 
-  .main-grid-articles>article {
-    padding-top: 5em;
-  }
-
-
   .description-p {
     font-size: 1.7rem;
   }
 
-  .gridGallery {
-    display: grid;
-    margin-bottom: 3rem;
-  }
-
-  /* Div general de tarjeta */
-
-  .middleGrid {
-    box-shadow: var(--boxColors);
-    border-radius: 0.4rem;
-    padding: 2rem;
-    box-shadow: var(--shadow);
-    background: #ffffff05;
-    border: .1rem solid #ffffff18;
-    margin: 1rem;
-  }
-
-  .middleGrid>a>img {
-    border-radius: .8rem;
-    padding: .4rem;
-    width: 100%;
-  }
-
-  .middleGrid>p {
-    margin-top: -1.3rem;
-  }
-
-  .middleGrid>a>h3 {
-    line-height: 2.3rem;
-    font-size: 1.7rem;
-  }
-
-  .middleGrid>p {
-    padding-top: 1.5rem;
-    font-size: 1.2rem;
-  }
-
-  .middleGrid>a>h3 {
-    color: #fff;
-  }
-
-  .middleGrid>img {
-    margin-bottom: 2rem;
-  }
-
-}
-
-/* Botones del grid de proyectos */
-
-.middleGridButtons {
-  display: flex;
-  gap: 1rem;
-}
-
-.middleGridButtons>a {
-  margin-bottom: 0;
-}
-
-.middleGridButtons>a>span {
-  font-size: 1.3rem;
-}
 
 footer {
   display: flex;
@@ -216,15 +141,14 @@ footer {
   margin: none;
 }
 
+
+
 footer>p {
   display: block;
   font-size: 1.4rem;
   margin-top: 1rem;
 }
 
-footer>article>.gridGallery>.middleGrid>a>h3 {
-  color: #fff;
-}
 
 }
 

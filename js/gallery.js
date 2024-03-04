@@ -179,7 +179,7 @@ const conferences = [
         "description": "Presentación de DALL·E, repercusiones y vistazo a la IA.",
         "buttons": [
             {
-                "name": "Ver Presentación",
+                "name": "Ver Clase",
                 "link": "https://www.twitch.tv/videos/1503142718?filter=highlights&sort=time"
             }
         ]
@@ -193,7 +193,7 @@ const conferences = [
         "description": "Cómo proteger nuestros datos en internet.",
         "buttons": [
             {
-                "name": "Ver Guía",
+                "name": "Ver Clase",
                 "link": "https://www.twitch.tv/videos/1476174774?filter=highlights&sort=time"
             }
         ]

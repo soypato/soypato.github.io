@@ -97,12 +97,21 @@ h3
         color: #fff;
         background-color: var(--hover-color);
     }
+    
+
+
     footer{
         display: grid;
         grid-template-columns: 1fr 5fr 1fr;
         background-color: #1e1c1c;
         color: #fff;
         border-top: 0.1rem solid #363333;
+        
+    }
+    footer > p{
+        grid-area: 1 / 2;
+        padding: 2rem 0;
+        text-align: center;
     }
     footer > article{
         grid-area: 2 / 2;
