@@ -69,7 +69,7 @@ const proyectos = [
             "title": "Página principal de CountryCodeFinder"
         },
         "name": "CountryCodeFinder",
-        "description": "Buscador de países en base a su código de área. Hecho en Flask y SQL. Proyecto final para Harvard CS50.",
+        "description": "Buscador de países en base a su area code. Hecho en Flask y SQL. Proyecto final para Harvard CS50.",
         "buttons": [
             {
                 "name": "Código",
@@ -99,7 +99,7 @@ const proyectos = [
             },
             {
                 "name": "Ver Demo",
-                "link": "soypato.github.io/enexterior",
+                "link": "https://soypato.github.io/enexterior",
                 "title": "Enlace a la demostración en GitHub Pages"
             }
         ]
@@ -136,7 +136,7 @@ const proyectos = [
             },
             {
                 "name": "Ver Demo",
-                "link": "bit.ly/soypato",
+                "link": "https://soypato.github.io/redes",
                 "title": "Enlace a la demostración en GH Pages"
             }
         ]
