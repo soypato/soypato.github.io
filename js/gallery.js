@@ -56,7 +56,7 @@ const proyectos = [
                 "title": "Enlace a GitHub"
             },
             {
-                "name": "Instrucciones",
+                "name": "Documentación",
                 "link": "https://github.com/soypato/DuckTime/blob/main/readme.md",
                 "title": "Enlace a GitHub"
             }
@@ -98,46 +98,9 @@ const proyectos = [
                 "title": "Enlace a GitHub"
             },
             {
-                "name": "Ver Demo",
+                "name": "Abrir",
                 "link": "https://soypato.github.io/enexterior",
                 "title": "Enlace a la demostración en GitHub Pages"
-            }
-        ]
-    },
-    {
-        "image": {
-            "src": "img/portfolio.webp",
-            "alt": "Vista previa del portfolio",
-            "title": "Vista previa del portfolio"
-        },
-        "name": "Portfolio de soypato",
-        "description": "¡Este portfolio! Realizado con HTML, CSS, JS y Bootstrap. El lugar donde viven mis proyectos.",
-        "buttons": [
-            {
-                "name": "Código",
-                "link": "https://github.com/soypato/soypato.github.io/",
-                "title": "Enlace a GitHub"
-            }
-        ]
-    },
-    {
-        "image": {
-            "src": "img/clon-lt.webp",
-            "alt": "Captura del clon de Linktree",
-            "title": "Captura del clon de Linktree"
-        },
-        "name": "Clon de Linktree",
-        "description": "Clon de recopilador de redes para social media. Hecho con HTML y CSS.",
-        "buttons": [
-            {
-                "name": "Código",
-                "link": "https://github.com/soypato/redes",
-                "title": "Enlace a GitHub"
-            },
-            {
-                "name": "Ver Demo",
-                "link": "https://soypato.github.io/redes",
-                "title": "Enlace a la demostración en GH Pages"
             }
         ]
     }
