@@ -1,6 +1,27 @@
 const proyectos = [
     {
         "image": {
+            "src": "img/PandyTask.webp",
+            "alt": "Logo de PandyTask",
+            "title": "Logo de PandyTask"
+        },
+        "name": "PandyTask",
+        "description": "Sistema de gestión de tareas y recompensas gamificadas. Proyecto Final UTN - Lab. 3. Hecho en Java.",
+        "buttons": [
+            {
+                "name": "Código",
+                "link": "https://github.com/soypato/pandytask",
+                "title": "Enlace a GitHub"
+            },
+            {
+                "name": "Documentación",
+                "link": "https://github.com/soypato/PandyTask/blob/main/readme.md",
+                "title": "Enlace a GitHub"
+            }
+        ]
+    },
+    {
+        "image": {
             "src": "img/FitHub-logo.webp",
             "alt": "Logo de FitHub",
             "title": "Logo de FitHub"
