@@ -49,4 +49,3 @@ function handleIntersect(entries, observer) {
     }
   });
 }
-
