@@ -1,0 +1,128 @@
+[
+    {
+        "image": {
+            "src": "img/PandyTask.webp",
+            "alt": "Logo de PandyTask",
+            "title": "Logo de PandyTask"
+        },
+        "name": "PandyTask",
+        "description": "Sistema de gestión de tareas y recompensas gamificadas. Proyecto Final UTN - Lab. 3. Hecho en Java.",
+        "buttons": [
+            {
+                "name": "Código",
+                "link": "https://github.com/soypato/pandytask",
+                "title": "Enlace a GitHub"
+            },
+            {
+                "name": "Documentación",
+                "link": "https://github.com/soypato/PandyTask/blob/main/readme.md",
+                "title": "Enlace a GitHub"
+            }
+        ]
+    },
+    {
+        "image": {
+            "src": "img/FitHub-logo.webp",
+            "alt": "Logo de FitHub",
+            "title": "Logo de FitHub"
+        },
+        "name": "FitHub Gimnasios",
+        "description": "Sistema de Gimnasios en CLI con eficiencia de datos. Proyecto Final UTN - Lab. 2. Hecho en C.",
+        "buttons": [
+            {
+                "name": "Código",
+                "link": "https://github.com/soypato/fithub",
+                "title": "Enlace a GitHub"
+            },
+            {
+                "name": "Documentación",
+                "link": "https://github.com/soypato/FitHub/tree/main/aa%20docs%20project",
+                "title": "Enlace a GitHub"
+            }
+        ]
+    },
+    {
+        "image": {
+            "src": "/img/stay.webp",
+            "alt": "Logo de Stay Track Gestiones",
+            "title": "Logo de Stay Track Gestiones"
+        },
+        "name": "StayTrack Gestiones",
+        "description": "Sistema de Hotel basado en consola, CRUD. Proyecto Final UTN - Lab. 1. Hecho en C.",
+        "buttons": [
+            {
+                "name": "Código",
+                "link": "https://github.com/soypato/Stay-Track-Gestiones",
+                "title": "Enlace a GitHub"
+            },
+            {
+                "name": "Documentación",
+                "link": "https://github.com/soypato/Stay-Track-Gestiones/tree/main/OFFCODE%20ASSETS",
+                "title": "Enlace a GitHub"
+            }
+        ]
+    },
+    {
+        "image": {
+            "src": "/img/duckTime.webp",
+            "alt": "Página principal de DuckTime",
+            "title": "Página principal de DuckTime"
+        },
+        "name": "DuckTime",
+        "description": "Una librería escrita en C para el manejo básico de fechas con sus respectivos comprobantes.",
+        "buttons": [
+            {
+                "name": "Código",
+                "link": "https://github.com/soypato/ducktime",
+                "title": "Enlace a GitHub"
+            },
+            {
+                "name": "Documentación",
+                "link": "https://github.com/soypato/DuckTime/blob/main/readme.md",
+                "title": "Enlace a GitHub"
+            }
+        ]
+    },
+    {
+        "image": {
+            "src": "/img/countrycodefinder.webp",
+            "alt": "Página principal de CountryCodeFinder",
+            "title": "Página principal de CountryCodeFinder"
+        },
+        "name": "CountryCodeFinder",
+        "description": "Buscador de países en base a su area code. Hecho en Flask y SQL. Proyecto final para Harvard CS50.",
+        "buttons": [
+            {
+                "name": "Código",
+                "link": "https://github.com/soypato/CountryCodeFinder",
+                "title": "Enlace a GitHub"
+            },
+            {
+                "name": "Documentación",
+                "link": "https://github.com/soypato/CountryCodeFinder/blob/main/readme.md",
+                "title": "Enlace a GitHub"
+            }
+        ]
+    },
+    {
+        "image": {
+            "src": "img/EnExterior-banner.webp",
+            "alt": "Página principal de EnExterior",
+            "title": "Página principal de EnExterior"
+        },
+        "name": "EnExterior",
+        "description": "Valor de una compra en monedas extranjeras. Hecho con JavaScript y API de DolarSI.",
+        "buttons": [
+            {
+                "name": "Código",
+                "link": "https://github.com/soypato/enexterior",
+                "title": "Enlace a GitHub"
+            },
+            {
+                "name": "Abrir",
+                "link": "https://soypato.github.io/enexterior",
+                "title": "Enlace a la demostración en GitHub Pages"
+            }
+        ]
+    }
+]
