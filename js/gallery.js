@@ -1,3 +1,4 @@
+// COMPONENTS OF THE GALLERY
 const proyectos = [
     {
         "image": {
@@ -126,6 +127,8 @@ const proyectos = [
         ]
     }
 ];
+
+// CONFERENCES GALLERY COMPONENT
 const conferences = [
     {
         "image": {
@@ -214,7 +217,84 @@ const conferences = [
     }
 ];
 
+// TECHNOLOGIES GALLERY COMPONENT
+const technologies = [
+    {
+        "image": {
+            "src": "img/tech (5).webp",
+            "alt": "Logo de Java/POO",
+            "title": "Logo de Java/POO"
+        },
+        "name": "Java/POO",
+        "rating": "4/5"
+    },
+    {
+        "image": {
+            "src": "img/tech (8).webp",
+            "alt": "Logo JSON",
+            "title": "JSON"
+        },
+        "name": "JSON.org en Java",
+        "rating": "4/5"
+    },
+    {
+        "image": {
+            "src": "img/tech (1).webp",
+            "alt": "Logo de HTML y CSS",
+            "title": "Logo de HTML y CSS"
+        },
+        "name": "HTML/CSS",
+        "rating": "4/5"
+    },
+    {
+        "image": {
+            "src": "img/tech (2).webp",
+            "alt": "Logo de JavaScript",
+            "title": "Logo de JavaScript"
+        },
+        "name": "JavaScript",
+        "rating": "4/5"
+    },
+    {
+        "image": {
+            "src": "img/tech (3).webp",
+            "alt": "Logo de GIT y GitHub",
+            "title": "Logo de GIT y GitHub"
+        },
+        "name": "GIT & GitHub",
+        "rating": "4/5"
+    },
+    {
+        "image": {
+            "src": "img/tech (4).webp",
+            "alt": "Logo de C",
+            "title": "Logo de C"
+        },
+        "name": "C",
+        "rating": "4/5"
+    },
+    {
+        "image": {
+            "src": "img/tech (7).webp",
+            "alt": "Logo de Trello",
+            "title": "Logo de Trello"
+        },
+        "name": "Trello",
+        "rating": "4/5"
+    },
+    {
+        "image": {
+            "src": "img/tech (6).webp",
+            "alt": "Logo de Excel",
+            "title": "Logo de Excel"
+        },
+        "name": "Excel",
+        "rating": "3/5"
+    }
+];
 
+// GALLERY FUNCTION OF PROJECTS
+/// THIS FUNCTION GENERATES A GALLERY OF PROJECTS
 function generarGaleria(proyectos) {
     const galeriaContainer = document.createElement('div');
     galeriaContainer.classList.add('gridGallery');
@@ -268,10 +348,51 @@ function generarGaleria(proyectos) {
     return galeriaContainer;
 }
 
+// 
+
+function generarTechGaleria(technologies) {
+    const galeriaContainer = document.createElement('div');
+    galeriaContainer.classList.add('gridGallery');
+
+    technologies.forEach(tech => {
+        const middleGrid = document.createElement('div');
+        middleGrid.classList.add('middleGrid');
+
+        const image = document.createElement('img');
+        image.setAttribute('loading', 'lazy');
+        image.setAttribute('src', tech.image.src);
+        image.setAttribute('alt', tech.image.alt);
+        image.setAttribute('title', tech.image.title);
+
+        const techName = document.createElement('h3');
+        techName.textContent = `${tech.name} - ${tech.rating}`;
+
+        middleGrid.appendChild(image);
+        middleGrid.appendChild(techName);
+
+        galeriaContainer.appendChild(middleGrid);
+    });
+
+    return galeriaContainer;
+}
+
+
+// MAIN ///////////////////////////////////////////////////////////////////////////////////////////
+
+/// PROJECTS
+
 const galeriaProjects = generarGaleria(proyectos);
 const gridGalleryContainer = document.getElementById('gridGalleryProjects');
 gridGalleryContainer.appendChild(galeriaProjects);
 
+/// CONFERENCES
+
 const galeriaConferences = generarGaleria(conferences);
 const gridGalleryContainerConferences = document.getElementById('gridGalleryConferences');
 gridGalleryContainerConferences.appendChild(galeriaConferences);
+
+/// TECH
+
+const galeriaTechnologies = generarTechGaleria(technologies);
+const gridGalleryContainerTechnologies = document.getElementById('gridGalleryTech');
+gridGalleryContainerTechnologies.appendChild(galeriaTechnologies);
