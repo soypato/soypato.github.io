@@ -30,14 +30,13 @@ body {
   }
 
   #basic-info {
-    display: block;
     position: relative;
-    top: 2rem;
     margin: auto;
     width: 82vw;
     display: grid;
     grid-template-rows: 0.5fr 0.5fr 0.2fr 0.2fr 0.5fr;
     grid-column-gap: 10px;
+    height: 19rem;
   }
 
   #basic-info>* {
@@ -122,6 +121,7 @@ body {
   #conf {
     background-color: #121212;
     color: #fff;
+    border-top: 0.1rem solid #363333;
   }
 
   #contacto {
