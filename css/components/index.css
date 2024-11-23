@@ -43,19 +43,22 @@ body {
     
   }
 
-  #basic-info {
+  #basic-info{
+    text-align: center;
     position: relative;
     margin: auto;
-    display: grid;
+    display: block;
     grid-template-rows: 0.5fr 0.5fr 0.2fr 0.2fr 0.5fr;
     grid-column-gap: 10px;
     height: 19rem;
+    scale: 1.5;
   }
-
+  
   #basic-info>* {
     display: block;
     margin: auto 0;
     font-weight: 600;
+    font-size: 4rem;
   }
 
   #profile {
