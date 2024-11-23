@@ -1,5 +1,15 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Asegúrate de que el header esté por encima de otros elementos */
+  background-color: rgba(18, 18, 18, 0.8); /* Fondo semi-transparente */
+}
+
 .navbar {
-  background-color: var(--brand-color);
+  background-color: #3742bc43;  /* Fondo completamente transparente */
+  backdrop-filter: blur(10px); /* Efecto de desenfoque */
 }
 
 .navbar-nav .nav-link.active,
@@ -19,14 +29,18 @@ body {
     border-radius: 100rem;
     display: block;
   }
-
+  
   .borderArticle {
     border-bottom: 0.1rem solid #363333;
   }
-
+  
   #welcome-section {
-    background-color: #050505;
-    color: #fff;
+    min-height: 100vh;
+    align-items: center;
+    display: flex;
+    background-image: linear-gradient(to bottom right, var(--brand-color), rgba(0, 0, 0, 0.9)), url(../../img/banner.webp);
+    background-size: cover;    color: #fff;
+    
   }
 
   #basic-info {
@@ -47,8 +61,13 @@ body {
   #profile {
     margin: auto;
     padding: 1rem;
-    max-width: 15rem;
+    max-width: 10rem;
     grid-area: 1/1/6/2;
+  }
+
+  #basic-info > h1
+  {
+    font-weight: 700;
   }
 
   h1 {
@@ -84,6 +103,8 @@ body {
     background-color: #1e1c1c;
     background-image: linear-gradient(rgba(0, 0, 0, .9), rgba(0, 0, 0, .9)), url(../../img/banner.webp);
     object-fit: contain;
+    min-height: 50vh;
+    align-items: center;
   }
 
   #hola-soy-pato {

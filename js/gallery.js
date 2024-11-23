@@ -1,5 +1,25 @@
-// COMPONENTS OF THE GALLERY
-const proyectos = [
+const projects = [
+    {
+        "image": {
+            "src": "img/WonderWay.webp",
+            "alt": "Logo de WonderWay",
+            "title": "Logo de WonderWay"
+        },
+        "name": "WonderWay",
+        "description": "Buscador/organizador de viajes con hoteles, restaurantes y atracciones. Hecho en Angular, json-server y la API de TripAdvisor. Proyecto final de carrera UTN.",
+        "buttons": [
+            {
+                "name": "Código",
+                "link": "https://github.com/soypato/wonderway",
+                "title": "Enlace a GitHub"
+            },
+            {
+                "name": "Documentación",
+                "link": "https://github.com/soypato/WonderWay/blob/main/README.MD",
+                "title": "Enlace a GitHub"
+            }
+        ]
+    },
     {
         "image": {
             "src": "img/PandyTask.webp",
@@ -126,7 +146,8 @@ const proyectos = [
             }
         ]
     }
-];
+]
+
 
 // CONFERENCES GALLERY COMPONENT
 const conferences = [
@@ -221,75 +242,59 @@ const conferences = [
 const technologies = [
     {
         "image": {
-            "src": "img/tech (5).webp",
-            "alt": "Logo de Java/POO",
-            "title": "Logo de Java/POO"
+            "src": "img/tech-stack/html-css-js.webp",
+            "alt": "Logo de HTML, CSS, JS",
+            "title": "Logo de HTML, CSS, JS"
         },
-        "name": "Java/POO",
-        "rating": "4/5"
+        "name": "HTML/CSS/JS"
     },
     {
         "image": {
-            "src": "img/tech (8).webp",
+            "src": "img/tech-stack/angular.webp",
+            "alt": "Logo de Angular",
+            "title": "Logo de Angular"
+        },
+        "name": "Angular"
+    },
+    {
+        "image": {
+            "src": "img/tech-stack/json.webp",
             "alt": "Logo JSON",
             "title": "JSON"
         },
-        "name": "JSON.org en Java",
-        "rating": "4/5"
+        "name": "JSON"
     },
     {
         "image": {
-            "src": "img/tech (1).webp",
-            "alt": "Logo de HTML y CSS",
-            "title": "Logo de HTML y CSS"
+            "src": "img/tech-stack/java.webp",
+            "alt": "Logo de Java/POO",
+            "title": "Logo de Java/POO"
         },
-        "name": "HTML/CSS",
-        "rating": "4/5"
+        "name": "Java/POO"
     },
     {
         "image": {
-            "src": "img/tech (2).webp",
-            "alt": "Logo de JavaScript",
-            "title": "Logo de JavaScript"
-        },
-        "name": "JavaScript",
-        "rating": "4/5"
-    },
-    {
-        "image": {
-            "src": "img/tech (3).webp",
+            "src": "img/tech-stack/git-github.webp",
             "alt": "Logo de GIT y GitHub",
             "title": "Logo de GIT y GitHub"
         },
-        "name": "GIT & GitHub",
-        "rating": "4/5"
+        "name": "GIT & GitHub"
     },
     {
         "image": {
-            "src": "img/tech (4).webp",
+            "src": "img/tech-stack/c.webp",
             "alt": "Logo de C",
             "title": "Logo de C"
         },
-        "name": "C",
-        "rating": "4/5"
+        "name": "C"
     },
     {
         "image": {
-            "src": "img/tech (7).webp",
-            "alt": "Logo de Trello",
-            "title": "Logo de Trello"
+            "src": "img/tech-stack/jira.webp",
+            "alt": "Logo de Jira",
+            "title": "Logo de Jira"
         },
-        "name": "Trello",
-        "rating": "4/5"
-    },
-    {
-        "image": {
-            "src": "img/tech (6).webp",
-            "alt": "Logo de Excel",
-            "title": "Logo de Excel"
-        },
-        "name": "Excel",
-        "rating": "3/5"
+        "name": "Jira / SCRUM"
     }
 ];
 
@@ -365,7 +370,7 @@ function generarTechGaleria(technologies) {
         image.setAttribute('title', tech.image.title);
 
         const techName = document.createElement('h3');
-        techName.textContent = `${tech.name} - ${tech.rating}`;
+        techName.textContent = `${tech.name}`;
 
         middleGrid.appendChild(image);
         middleGrid.appendChild(techName);
@@ -381,7 +386,7 @@ function generarTechGaleria(technologies) {
 
 /// PROJECTS
 
-const galeriaProjects = generarGaleria(proyectos);
+const galeriaProjects = generarGaleria(projects);
 const gridGalleryContainer = document.getElementById('gridGalleryProjects');
 gridGalleryContainer.appendChild(galeriaProjects);
 

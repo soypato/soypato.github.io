@@ -90,6 +90,8 @@ footer>article>.gridGallery>.middleGrid>a>h3 {
         grid-template-columns: 1fr 5fr 1fr;
         background-color: #1e1c1c;
         color: #fff;
+        min-height: 50vh;
+        align-items: center;
     }
 }
 

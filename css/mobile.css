@@ -1,56 +1,76 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html{
+
+html {
     font-size: 62.5%;
     scroll-behavior: smooth;
 }
-:root{
+
+:root {
     --brand-color: #3742bc;
     --secondary-color: #232c7a;
     --hover-color: #3742bc;
 }
-body{
+
+body {
     font-family: 'Montserrat', sans-serif;
 }
-a{
+
+a {
     text-decoration: none;
 }
-.navbar{
+
+.navbar {
     background-color: var(--brand-color);
     z-index: 100;
     width: 100%;
     top: 0;
 }
-.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link{
+
+.navbar-nav .nav-link.active,
+.navbar-nav .show>.nav-link {
     color: #fff;
     font-size: 1.4rem;
 }
-h1, h2{
+
+/* Cambiar el color del ícono del menú hamburguesa a blanco */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.5 12.5a.5.5 0 010-1h13a.5.5 0 010 1h-13zm0-5a.5.5 0 010-1h13a.5.5 0 010 1h-13zm0-5a.5.5 0 010-1h13a.5.5 0 010 1h-13z'/%3E%3C/svg%3E");
+}
+
+/* Cambiar el color del ícono al hacer hover */
+.navbar-toggler:hover .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.5 12.5a.5.5 0 010-1h13a.5.5 0 010 1h-13zm0-5a.5.5 0 010-1h13a.5.5 0 010 1h-13zm0-5a.5.5 0 010-1h13a.5.5 0 010 1h-13z'/%3E%3C/svg%3E");
+}
+
+h1,
+h2 {
     font-weight: 700;
     margin-top: 1.7rem;
 }
-h1{
+
+h1 {
     font-size: 5rem;
 }
-h2{
+
+h2 {
     font-size: 3rem;
 }
 
-h3
-{
+h3 {
     font-size: 2rem;
     margin-top: 1rem;
 }
 
-.navbar-brand > img{
+.navbar-brand>img {
     width: 12rem;
     padding: 1rem;
 }
 
-.middleGrid > img{
+.middleGrid>img {
     width: 1600px;
     height: 117px;
     object-fit: cover;
@@ -59,26 +79,31 @@ h3
 }
 
 @media screen and (min-width:200px) {
-    header > .container{
+    header>.container {
         max-width: none;
     }
-    main{
+
+    main {
         display: grid;
         grid-template-columns: 1fr 5fr 1fr;
-        min-height  : 100vh;
+        min-height: 100vh;
     }
-    main > article{
+
+    main>article {
         grid-area: 1 / 2;
     }
-    main > article > p{
+
+    main>article>p {
         font-size: 1.8rem;
     }
-    img{
+
+    img {
         border-radius: 0.4rem;
         max-width: 100%;
     }
 
-    .fullWidthButton, .inputSubmit-style {
+    .fullWidthButton,
+    .inputSubmit-style {
         display: grid;
         place-items: center;
         margin: 2rem 0 3rem 0;
@@ -93,30 +118,34 @@ h3
         color: #fff;
 
     }
-    .fullWidthButton:hover{
+
+    .fullWidthButton:hover {
         color: #fff;
         background-color: var(--hover-color);
     }
-    
 
 
-    footer{
+
+    footer {
         display: grid;
         grid-template-columns: 1fr 5fr 1fr;
         background-color: #1e1c1c;
         color: #fff;
         border-top: 0.1rem solid #363333;
-        
+
     }
-    footer > p{
+
+    footer>p {
         grid-area: 1 / 2;
         padding: 2rem 0;
         text-align: center;
     }
-    footer > article{
+
+    footer>article {
         grid-area: 2 / 2;
     }
-    footer > article > .gridGallery > .middleGrid > a > h3{
+
+    footer>article>.gridGallery>.middleGrid>a>h3 {
         color: #fff;
     }
 }
