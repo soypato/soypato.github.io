@@ -7,7 +7,8 @@ header {
   /* Asegúrate de que el header esté por encima de otros elementos */
   background-color: rgba(18, 18, 18, 0.8);
   /* Fondo semi-transparente */
-  animation: slideDown 1.2s ease-out; /* Slide-down effect for the title */
+  animation: slideDown 1.2s ease-out;
+  /* Slide-down effect for the title */
 
 }
 
@@ -16,7 +17,7 @@ header {
   /* Fondo completamente transparente */
   backdrop-filter: blur(10px);
   /* Efecto de desenfoque */
-  
+
 }
 
 .navbar-nav .nav-link.active,
@@ -48,7 +49,8 @@ body {
     background-image: linear-gradient(to bottom right, var(--brand-color), rgba(0, 0, 0, 0.9)), url(../../img/banner.webp);
     background-size: cover;
     color: #fff;
-
+    animation: gradientZoom 30s ease-in-out infinite;
+    /* Smooth zoom in and out effect */
   }
 
   #basic-info {
@@ -60,7 +62,8 @@ body {
     grid-column-gap: 10px;
     height: 19rem;
     scale: 1.5;
-    animation: fadeIn 2s ease-in-out; /* Smooth fade-in animation */
+    animation: fadeIn 2s ease-in-out;
+    /* Smooth fade-in animation */
 
   }
 
@@ -76,13 +79,15 @@ body {
     padding: 1rem;
     max-width: 10rem;
     grid-area: 1/1/6/2;
-    animation: scaleUp 1.5s ease-in-out; /* Scale-up animation for profile image */
+    animation: scaleUp 1.5s ease-in-out;
+    /* Scale-up animation for profile image */
 
   }
 
   #basic-info>h1 {
     font-weight: 700;
-    animation: slideDown 1.2s ease-out; /* Slide-down effect for the title */
+    animation: slideDown 1.2s ease-out;
+    /* Slide-down effect for the title */
   }
 
   h1 {
@@ -94,7 +99,8 @@ body {
   #basic-info-description-1,
   #basic-info-description-2 {
     font-size: 1rem;
-    animation: fadeInText 1.8s ease-in; /* Text fades in smoothly */
+    animation: fadeInText 1.8s ease-in;
+    /* Text fades in smoothly */
   }
 
   #basic-info-description-1 {
@@ -229,6 +235,20 @@ body {
     100% {
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+
+  /* Keyframe for zoom animation */
+  @keyframes gradientZoom {
+
+    0%,
+    100% {
+      background-size: 100%;
+    }
+
+    50% {
+      background-size: 110%;
+      /* Slight zoom at midpoint */
     }
   }
 
