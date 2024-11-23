@@ -1,5 +1,20 @@
-// COMPONENTS OF THE GALLERY
-const proyectos = [
+const projects = [
+    {
+        "image": {
+            "src": "img/WonderWay.webp",
+            "alt": "Logo de WonderWay",
+            "title": "Logo de WonderWay"
+        },
+        "name": "WonderWay",
+        "description": "Planificá tu siguiente viaje, con hoteles, restaurants y atracciones. Proyecto Final UTN - Lab. 4. Angular - json-server, Tripadvisor API.",
+        "buttons": [
+            {
+                "name": "Código",
+                "link": "https://github.com/soypato/wonderway",
+                "title": "Enlace a GitHub"
+            },
+        ]
+    },
     {
         "image": {
             "src": "img/PandyTask.webp",
@@ -126,7 +141,8 @@ const proyectos = [
             }
         ]
     }
-];
+]
+
 
 // CONFERENCES GALLERY COMPONENT
 const conferences = [
@@ -234,7 +250,7 @@ const technologies = [
             "alt": "Logo JSON",
             "title": "JSON"
         },
-        "name": "JSON.org en Java",
+        "name": "JSON",
         "rating": "4/5"
     },
     {
@@ -272,24 +288,6 @@ const technologies = [
         },
         "name": "C",
         "rating": "4/5"
-    },
-    {
-        "image": {
-            "src": "img/tech (7).webp",
-            "alt": "Logo de Trello",
-            "title": "Logo de Trello"
-        },
-        "name": "Trello",
-        "rating": "4/5"
-    },
-    {
-        "image": {
-            "src": "img/tech (6).webp",
-            "alt": "Logo de Excel",
-            "title": "Logo de Excel"
-        },
-        "name": "Excel",
-        "rating": "3/5"
     }
 ];
 
@@ -365,7 +363,7 @@ function generarTechGaleria(technologies) {
         image.setAttribute('title', tech.image.title);
 
         const techName = document.createElement('h3');
-        techName.textContent = `${tech.name} - ${tech.rating}`;
+        techName.textContent = `${tech.name}`;
 
         middleGrid.appendChild(image);
         middleGrid.appendChild(techName);
@@ -381,7 +379,7 @@ function generarTechGaleria(technologies) {
 
 /// PROJECTS
 
-const galeriaProjects = generarGaleria(proyectos);
+const galeriaProjects = generarGaleria(projects);
 const gridGalleryContainer = document.getElementById('gridGalleryProjects');
 gridGalleryContainer.appendChild(galeriaProjects);
 
