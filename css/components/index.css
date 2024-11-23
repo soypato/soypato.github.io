@@ -3,13 +3,21 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000; /* Asegúrate de que el header esté por encima de otros elementos */
-  background-color: rgba(18, 18, 18, 0.8); /* Fondo semi-transparente */
+  z-index: 1000;
+  /* Asegúrate de que el header esté por encima de otros elementos */
+  background-color: rgba(18, 18, 18, 0.8);
+  /* Fondo semi-transparente */
+  animation: slideDown 1.2s ease-out;
+  /* Slide-down effect for the title */
+
 }
 
 .navbar {
-  background-color: #3742bc43;  /* Fondo completamente transparente */
-  backdrop-filter: blur(10px); /* Efecto de desenfoque */
+  background-color: #3742bc43;
+  /* Fondo completamente transparente */
+  backdrop-filter: blur(10px);
+  /* Efecto de desenfoque */
+
 }
 
 .navbar-nav .nav-link.active,
@@ -29,21 +37,23 @@ body {
     border-radius: 100rem;
     display: block;
   }
-  
+
   .borderArticle {
     border-bottom: 0.1rem solid #363333;
   }
-  
+
   #welcome-section {
     min-height: 100vh;
     align-items: center;
     display: flex;
     background-image: linear-gradient(to bottom right, var(--brand-color), rgba(0, 0, 0, 0.9)), url(../../img/banner.webp);
-    background-size: cover;    color: #fff;
-    
+    background-size: cover;
+    color: #fff;
+    animation: gradientZoom 30s ease-in-out infinite;
+    /* Smooth zoom in and out effect */
   }
 
-  #basic-info{
+  #basic-info {
     text-align: center;
     position: relative;
     margin: auto;
@@ -52,8 +62,11 @@ body {
     grid-column-gap: 10px;
     height: 19rem;
     scale: 1.5;
+    animation: fadeIn 2s ease-in-out;
+    /* Smooth fade-in animation */
+
   }
-  
+
   #basic-info>* {
     display: block;
     margin: auto 0;
@@ -66,11 +79,15 @@ body {
     padding: 1rem;
     max-width: 10rem;
     grid-area: 1/1/6/2;
+    animation: scaleUp 1.5s ease-in-out;
+    /* Scale-up animation for profile image */
+
   }
 
-  #basic-info > h1
-  {
+  #basic-info>h1 {
     font-weight: 700;
+    animation: slideDown 1.2s ease-out;
+    /* Slide-down effect for the title */
   }
 
   h1 {
@@ -82,6 +99,8 @@ body {
   #basic-info-description-1,
   #basic-info-description-2 {
     font-size: 1rem;
+    animation: fadeInText 1.8s ease-in;
+    /* Text fades in smoothly */
   }
 
   #basic-info-description-1 {
@@ -157,21 +176,81 @@ body {
   }
 
 
-footer {
-  display: flex;
-  justify-content: space-around;
-  background-color: #1e1c1c;
-  margin: none;
-}
+  footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #1e1c1c;
+    margin: none;
+  }
 
 
 
-footer>p {
-  display: block;
-  font-size: 1.4rem;
-  margin-top: 1rem;
-}
+  footer>p {
+    display: block;
+    font-size: 1.4rem;
+    margin-top: 1rem;
+  }
 
+  /* Keyframe animations */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes scaleUp {
+    0% {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideDown {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInText {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Keyframe for zoom animation */
+  @keyframes gradientZoom {
+
+    0%,
+    100% {
+      background-size: 100%;
+    }
+
+    50% {
+      background-size: 110%;
+      /* Slight zoom at midpoint */
+    }
+  }
 
 }
 
