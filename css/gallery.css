@@ -1,8 +1,5 @@
 .gridGallery {
-    display: grid;
-    margin-bottom: 3rem;
-    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
-}
+    margin-bottom: 3rem;}
 
 /* Div general de tarjeta */
 
@@ -79,9 +76,13 @@ footer>article>.gridGallery>.middleGrid>a>h3 {
         aspect-ratio: 16/9;
         object-position: center;
     }
+    article
+    {
+        margin: 0 3rem;
+    }
 }
 
-@media screen and (min-width: 200px) {
+@media screen and (min-width: 768px) {
     header>.container {
         max-width: none;
     }
@@ -91,7 +92,11 @@ footer>article>.gridGallery>.middleGrid>a>h3 {
         grid-template-columns: 1fr 5fr 1fr;
         min-height: 100vh;
     }
-
+    .gridGallery {
+        margin-bottom: 3rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
 
     .main-grid-articles {
         background-color: #1e1c1c;
@@ -106,6 +111,18 @@ footer>article>.gridGallery>.middleGrid>a>h3 {
         padding: 0 10rem;
 
     }
+}
+
+@media screen and (min-width: 1024px) {
+    .gridGallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    }
+
+    .main-grid-articles {
+        padding: 5rem;
+    }
+    
 }
 
 .main-grid-articles>article {
