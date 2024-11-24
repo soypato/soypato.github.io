@@ -1,6 +1,7 @@
 .gridGallery {
     display: grid;
     margin-bottom: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
 }
 
 /* Div general de tarjeta */
@@ -13,6 +14,7 @@
     background: #ffffff05;
     border: .1rem solid #ffffff18;
     margin: 1rem;
+    cursor: pointer;
 }
 
 .middleGrid:hover
@@ -92,12 +94,17 @@ footer>article>.gridGallery>.middleGrid>a>h3 {
 
 
     .main-grid-articles {
-        display: grid;
-        grid-template-columns: 1fr 5fr 1fr;
         background-color: #1e1c1c;
         color: #fff;
         min-height: 50vh;
         align-items: center;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        padding: 5rem;
+        margin-bottom: 0rem;
+        padding: 0 10rem;
+
     }
 }
 

@@ -305,9 +305,14 @@ function generarGaleria(proyectos) {
     galeriaContainer.classList.add('gridGallery');
 
     proyectos.forEach(proyecto => {
-        const middleGrid = document.createElement('div');
+        const middleGrid = document.createElement('article');
         middleGrid.classList.add('middleGrid');
 
+        // Evento para abrir en nueva pestaña
+        middleGrid.addEventListener('click', () => {
+            window.open(proyecto.buttons[0].link, '_blank');
+        });
+        
         const image = document.createElement('img');
         image.setAttribute('loading', 'lazy');
         image.setAttribute('src', proyecto.image.src);
@@ -353,7 +358,53 @@ function generarGaleria(proyectos) {
     return galeriaContainer;
 }
 
-// 
+// GALLERY FUNCTION OF CONFERENCES
+/// THIS FUNCTION GENERATES A GALLERY OF CONFERENCES
+function generarConferencesGaleria(conferences) {
+    const galeriaContainer = document.createElement('div');
+    galeriaContainer.classList.add('gridGallery');
+
+    conferences.forEach(conference => {
+        const middleGrid = document.createElement('article');
+        middleGrid.classList.add('middleGrid');
+        
+        const image = document.createElement('img');
+        image.setAttribute('loading', 'lazy');
+        image.setAttribute('src', conference.image.src);
+        image.setAttribute('alt', conference.image.alt);
+        image.setAttribute('title', conference.image.title);
+
+        const conferenceName = document.createElement('h3');
+        conferenceName.textContent = conference.name;
+
+        const conferenceDescription = document.createElement('p');
+        conferenceDescription.textContent = conference.description;
+
+        const middleGridButtons = document.createElement('div');
+        middleGridButtons.classList.add('middleGridButtons');
+
+        for(let i = 0; i < conference.buttons.length; i++){
+            const button = document.createElement('a');
+            button.classList.add('fullWidthButton');
+            button.setAttribute('href', conference.buttons[i].link);
+            button.setAttribute('target', '_blank');
+            button.setAttribute('title', conference.buttons[i].title);
+            button.innerHTML = `<span>${conference.buttons[i].name}</span>`;
+            middleGridButtons.appendChild(button);
+        }
+
+        middleGrid.classList.add('middleGrid');
+        middleGrid.appendChild(image);
+        middleGrid.appendChild(middleGridButtons);
+        middleGrid.appendChild(conferenceName);
+const galeriaConferences = generarConferencesGaleria(conferences);
+        middleGrid.appendChild(middleGridButtons);
+
+        galeriaContainer.appendChild(middleGrid);
+    });
+
+    return galeriaContainer;
+}
 
 function generarTechGaleria(technologies) {
     const galeriaContainer = document.createElement('div');
