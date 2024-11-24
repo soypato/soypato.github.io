@@ -15,6 +15,12 @@
     margin: 1rem;
 }
 
+.middleGrid:hover
+{
+    box-shadow: var(--hover-shadow);
+    transform: scale(1.02);
+}
+
 .middleGrid>a>img {
     border-radius: .8rem;
     padding: .4rem;
@@ -162,4 +168,18 @@ footer>article>.gridGallery>.middleGrid>a>h3 {
 .footer-description > article > p
 {
     font-size: 1.5rem;
+}
+
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.middleGrid {
+    animation: appear 1s ease-in-out forwards;
 }

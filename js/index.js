@@ -50,3 +50,19 @@ function handleIntersect(entries, observer) {
   });
 }
 
+
+document.addEventListener("DOMContentLoaded", function() {
+  const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target); // Deja de observar una vez que se ha animado
+          }
+      });
+  });
+
+  const middleGrid = document.querySelector('.middleGrid');
+  if (middleGrid) {
+      observer.observe(middleGrid);
+  }
+});
