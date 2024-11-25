@@ -14,7 +14,7 @@ const projects = [
                 "title": "Enlace a GitHub"
             },
             {
-                "name": "Documentación",
+                "name": "Docs",
                 "link": "https://github.com/soypato/WonderWay/blob/main/README.MD",
                 "title": "Enlace a GitHub"
             }
@@ -35,7 +35,7 @@ const projects = [
                 "title": "Enlace a GitHub"
             },
             {
-                "name": "Documentación",
+                "name": "Docs",
                 "link": "https://github.com/soypato/PandyTask/blob/main/readme.md",
                 "title": "Enlace a GitHub"
             }
@@ -56,7 +56,7 @@ const projects = [
                 "title": "Enlace a GitHub"
             },
             {
-                "name": "Documentación",
+                "name": "Docs",
                 "link": "https://github.com/soypato/FitHub/tree/main/aa%20docs%20project",
                 "title": "Enlace a GitHub"
             }
@@ -77,7 +77,7 @@ const projects = [
                 "title": "Enlace a GitHub"
             },
             {
-                "name": "Documentación",
+                "name": "Docs",
                 "link": "https://github.com/soypato/Stay-Track-Gestiones/tree/main/OFFCODE%20ASSETS",
                 "title": "Enlace a GitHub"
             }
@@ -98,7 +98,7 @@ const projects = [
                 "title": "Enlace a GitHub"
             },
             {
-                "name": "Documentación",
+                "name": "Docs",
                 "link": "https://github.com/soypato/DuckTime/blob/main/readme.md",
                 "title": "Enlace a GitHub"
             }
@@ -119,7 +119,7 @@ const projects = [
                 "title": "Enlace a GitHub"
             },
             {
-                "name": "Documentación",
+                "name": "Docs",
                 "link": "https://github.com/soypato/CountryCodeFinder/blob/main/readme.md",
                 "title": "Enlace a GitHub"
             }
