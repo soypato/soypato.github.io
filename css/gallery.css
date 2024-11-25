@@ -80,6 +80,20 @@ footer>article>.gridGallery>.middleGrid>a>h3 {
     {
         margin: 0 3rem;
     }
+
+    .main-grid-articles {
+        background-color: #1e1c1c;
+        color: #fff;
+        min-height: 50vh;
+        align-items: center;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        padding: 5rem;
+        margin-bottom: 0rem;
+        padding: 0 10rem;
+
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -98,19 +112,6 @@ footer>article>.gridGallery>.middleGrid>a>h3 {
         grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     }
 
-    .main-grid-articles {
-        background-color: #1e1c1c;
-        color: #fff;
-        min-height: 50vh;
-        align-items: center;
-        min-height: 100vh;
-        display: flex;
-        justify-content: center;
-        padding: 5rem;
-        margin-bottom: 0rem;
-        padding: 0 10rem;
-
-    }
 }
 
 @media screen and (min-width: 1024px) {
