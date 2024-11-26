@@ -120,7 +120,7 @@ body {
 
   #my-info-grid {
     display: grid;
-    grid-template-columns: 1fr 3.5fr 1fr;
+    grid-template-columns: 1fr 10fr 1fr;
     grid-template-rows: 1fr;
     background-color: #1e1c1c;
     background-image: linear-gradient(rgba(0, 0, 0, .9), rgba(0, 0, 0, .9)), url(../../img/banner.webp);
@@ -190,6 +190,7 @@ body {
     font-size: 1.4rem;
     margin-top: 1rem;
   }
+
 
   /* Keyframe animations */
   @keyframes fadeIn {
@@ -330,3 +331,4 @@ body {
   }
 
 }
+
