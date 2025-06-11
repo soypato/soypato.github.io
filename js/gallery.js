@@ -149,7 +149,7 @@ const conferences = [
                 "name": "Ver Clase",
                 "link": "https://www.twitch.tv/videos/2078610954",
                 "title": "Enlace a Twitch"
-            },  
+            },
             {
                 "name": "Temario",
                 "link": "https://mdputneduar-my.sharepoint.com/:w:/g/personal/patriciotubio_estudiante_mdp_utn_edu_ar/EX1Uc0SDQj1NjsqlGu75INQBQB8T2_F3f4prz3-IwWYW8A",
@@ -324,7 +324,6 @@ function renderTags(tags = []) {
 function renderCard({ image, name, description, buttons, tags }) {
     const article = document.createElement('article');
     article.classList.add('middleGrid');
-
     // Imagen
     article.appendChild(renderImage(image));
 
@@ -348,6 +347,17 @@ function renderCard({ image, name, description, buttons, tags }) {
     // Tags (si aplica)
     const tagsDiv = renderTags(tags);
     if (tagsDiv) article.appendChild(tagsDiv);
+
+
+    // Hacer clic en el card redirige al primer link, excepto si el click es en un botón
+    if (buttons && Array.isArray(buttons) && buttons.length > 0) {
+        article.style.cursor = "pointer";
+        article.addEventListener('click', function (e) {
+            // Si el click fue en un botón, no hacer nada
+            if (e.target.closest('a.fullWidthButton')) return;
+            window.open(buttons[0].link, '_blank');
+        });
+    }
 
     return article;
 }
@@ -397,6 +407,7 @@ function renderTechGallery(techs) {
     });
     return container;
 }
+
 const gridGalleryTech = document.getElementById('gridGalleryTech');
 if (gridGalleryTech) {
     gridGalleryTech.appendChild(renderTechGallery(technologies));
