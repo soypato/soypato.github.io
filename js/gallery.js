@@ -6,7 +6,7 @@ const projects = [
             "title": "Logo de WonderWay"
         },
         "name": "WonderWay",
-        "description": "Buscador/organizador de viajes con hoteles, restaurantes y atracciones. Hecho en Angular, json-server y la API de TripAdvisor. Proyecto final de carrera UTN.",
+        "description": "Organizador de viajes con hoteles, restaurantes y atracciones. Hecho en Angular, json-server y la API de TripAdvisor. Proyecto final de carrera UTN.",
         "buttons": [
             {
                 "name": "Código",
@@ -18,7 +18,8 @@ const projects = [
                 "link": "https://github.com/soypato/WonderWay/blob/main/README.MD",
                 "title": "Enlace a GitHub"
             }
-        ]
+        ],
+        "tags": ["angular", "javascript", "tripadvisor-api", "frontend", "typescript"]
     },
     {
         "image": {
@@ -39,7 +40,8 @@ const projects = [
                 "link": "https://github.com/soypato/PandyTask/blob/main/readme.md",
                 "title": "Enlace a GitHub"
             }
-        ]
+        ],
+        "tags": ["java", "gamification", "mvc", "oop", "desktop"]
     },
     {
         "image": {
@@ -60,7 +62,8 @@ const projects = [
                 "link": "https://github.com/soypato/FitHub/tree/main/aa%20docs%20project",
                 "title": "Enlace a GitHub"
             }
-        ]
+        ],
+        "tags": ["c", "cli", "data-structures", "efficiency", "desktop"]
     },
     {
         "image": {
@@ -81,28 +84,8 @@ const projects = [
                 "link": "https://github.com/soypato/Stay-Track-Gestiones/tree/main/OFFCODE%20ASSETS",
                 "title": "Enlace a GitHub"
             }
-        ]
-    },
-    {
-        "image": {
-            "src": "/img/duckTime.webp",
-            "alt": "Página principal de DuckTime",
-            "title": "Página principal de DuckTime"
-        },
-        "name": "DuckTime",
-        "description": "Una librería escrita en C para el manejo básico de fechas con sus respectivos comprobantes.",
-        "buttons": [
-            {
-                "name": "Código",
-                "link": "https://github.com/soypato/ducktime",
-                "title": "Enlace a GitHub"
-            },
-            {
-                "name": "Docs",
-                "link": "https://github.com/soypato/DuckTime/blob/main/readme.md",
-                "title": "Enlace a GitHub"
-            }
-        ]
+        ],
+        "tags": ["c", "cli", "data-structures", "desktop"]
     },
     {
         "image": {
@@ -123,7 +106,8 @@ const projects = [
                 "link": "https://github.com/soypato/CountryCodeFinder/blob/main/readme.md",
                 "title": "Enlace a GitHub"
             }
-        ]
+        ],
+        "tags": ["flask", "sql", "python", "web"]
     },
     {
         "image": {
@@ -144,7 +128,8 @@ const projects = [
                 "link": "https://soypato.github.io/enexterior",
                 "title": "Enlace a la demostración en GitHub Pages"
             }
-        ]
+        ],
+        "tags": ["javascript", "api", "web", "frontend"]
     }
 ]
 
@@ -298,157 +283,121 @@ const technologies = [
     }
 ];
 
-// GALLERY FUNCTION OF PROJECTS
-/// THIS FUNCTION GENERATES A GALLERY OF PROJECTS
-function generarGaleria(proyectos) {
-    const galeriaContainer = document.createElement('div');
-    galeriaContainer.classList.add('gridGallery');
 
-    proyectos.forEach(proyecto => {
-        const middleGrid = document.createElement('article');
-        middleGrid.classList.add('middleGrid');
+function renderButtons(buttons) {
+    const container = document.createElement('div');
+    container.classList.add('middleGridButtons');
+    buttons.forEach(({ name, link, title }) => {
+        const btn = document.createElement('a');
+        btn.classList.add('fullWidthButton');
+        btn.href = link;
+        btn.target = '_blank';
+        btn.title = title;
+        btn.innerHTML = `<span>${name}</span>`;
+        container.appendChild(btn);
+    });
+    return container;
+}
 
-        // Evento para abrir en nueva pestaña
-        middleGrid.addEventListener('click', () => {
-            window.open(proyecto.buttons[0].link, '_blank');
+function renderImage({ src, alt, title }) {
+    const img = document.createElement('img');
+    img.loading = 'lazy';
+    img.src = src;
+    img.alt = alt;
+    img.title = title;
+    return img;
+}
+
+function renderTags(tags = []) {
+    if (!Array.isArray(tags) || tags.length === 0) return null;
+    const tagsDiv = document.createElement('div');
+    tagsDiv.classList.add('tags');
+    tags.forEach(tag => {
+        const tagEl = document.createElement('span');
+        tagEl.classList.add('tag');
+        tagEl.textContent = tag;
+        tagsDiv.appendChild(tagEl);
+    });
+    return tagsDiv;
+}
+
+function renderCard({ image, name, description, buttons, tags }) {
+    const article = document.createElement('article');
+    article.classList.add('middleGrid');
+
+    // Imagen
+    article.appendChild(renderImage(image));
+
+    // Título
+    const h3 = document.createElement('h3');
+    h3.textContent = name;
+    article.appendChild(h3);
+
+    // Descripción
+    if (description) {
+        const p = document.createElement('p');
+        p.textContent = description;
+        article.appendChild(p);
+    }
+
+    // Botones (ahora VAN DESPUÉS del título y descripción)
+    if (buttons && Array.isArray(buttons)) {
+        article.appendChild(renderButtons(buttons));
+    }
+
+    // Tags (si aplica)
+    const tagsDiv = renderTags(tags);
+    if (tagsDiv) article.appendChild(tagsDiv);
+
+    return article;
+}
+
+
+function renderGallery(items, showTags = false) {
+    const container = document.createElement('div');
+    container.classList.add('gridGallery');
+    items.forEach(item => {
+        const card = renderCard({
+            ...item,
+            tags: showTags ? item.tags : undefined
         });
-        
-        const image = document.createElement('img');
-        image.setAttribute('loading', 'lazy');
-        image.setAttribute('src', proyecto.image.src);
-        image.setAttribute('alt', proyecto.image.alt);
-        image.setAttribute('title', proyecto.image.title);
-
-        const projectName = document.createElement('h3');
-        projectName.textContent = proyecto.name;
-
-        const projectDescription = document.createElement('p');
-        projectDescription.textContent = proyecto.description;
-
-        const middleGridButtons = document.createElement('div');
-        middleGridButtons.classList.add('middleGridButtons');
-
-        for(let i = 0; i < proyecto.buttons.length; i++){
-            const button = document.createElement('a');
-            button.classList.add('fullWidthButton');
-            button.setAttribute('href', proyecto.buttons[i].link);
-            button.setAttribute('target', '_blank');
-            button.setAttribute('title', proyecto.buttons[i].title);
-            button.innerHTML = `<span>${proyecto.buttons[i].name}</span>`;
-            middleGridButtons.appendChild(button);
-        }
-
-        middleGrid.classList.add('middleGrid');
-        middleGrid.appendChild(image);
-        middleGrid.appendChild(middleGridButtons);
-        middleGrid.appendChild(projectName);
-        middleGrid.appendChild(projectDescription);
-        middleGrid.appendChild(middleGridButtons);
-
-
-        galeriaContainer.appendChild(middleGrid);
+        container.appendChild(card);
     });
-
-    const masProyectosLink = document.createElement('a');
-    masProyectosLink.classList.add('fullWidthButton');
-    masProyectosLink.setAttribute('href', 'https://github.com/soypato?tab=repositories');
-    masProyectosLink.innerHTML = `<span>Más proyectos</span>`;
-
-
-    return galeriaContainer;
+    return container;
 }
 
-// GALLERY FUNCTION OF CONFERENCES
-/// THIS FUNCTION GENERATES A GALLERY OF CONFERENCES
-function generarConferencesGaleria(conferences) {
-    const galeriaContainer = document.createElement('div');
-    galeriaContainer.classList.add('gridGallery');
+// Renderización principal
 
-    conferences.forEach(conference => {
-        const middleGrid = document.createElement('article');
-        middleGrid.classList.add('middleGrid');
-        
-        const image = document.createElement('img');
-        image.setAttribute('loading', 'lazy');
-        image.setAttribute('src', conference.image.src);
-        image.setAttribute('alt', conference.image.alt);
-        image.setAttribute('title', conference.image.title);
-
-        const conferenceName = document.createElement('h3');
-        conferenceName.textContent = conference.name;
-
-        const conferenceDescription = document.createElement('p');
-        conferenceDescription.textContent = conference.description;
-
-        const middleGridButtons = document.createElement('div');
-        middleGridButtons.classList.add('middleGridButtons');
-
-        for(let i = 0; i < conference.buttons.length; i++){
-            const button = document.createElement('a');
-            button.classList.add('fullWidthButton');
-            button.setAttribute('href', conference.buttons[i].link);
-            button.setAttribute('target', '_blank');
-            button.setAttribute('title', conference.buttons[i].title);
-            button.innerHTML = `<span>${conference.buttons[i].name}</span>`;
-            middleGridButtons.appendChild(button);
-        }
-
-        middleGrid.classList.add('middleGrid');
-        middleGrid.appendChild(image);
-        middleGrid.appendChild(middleGridButtons);
-        middleGrid.appendChild(conferenceName);
-const galeriaConferences = generarConferencesGaleria(conferences);
-        middleGrid.appendChild(middleGridButtons);
-
-        galeriaContainer.appendChild(middleGrid);
-    });
-
-    return galeriaContainer;
+const gridGalleryProjects = document.getElementById('gridGalleryProjects');
+if (gridGalleryProjects) {
+    const projectsGallery = renderGallery(
+        projects,
+        true
+    );
+    gridGalleryProjects.appendChild(projectsGallery);
 }
 
-function generarTechGaleria(technologies) {
-    const galeriaContainer = document.createElement('div');
-    galeriaContainer.classList.add('gridGallery');
-
-    technologies.forEach(tech => {
-        const middleGrid = document.createElement('div');
-        middleGrid.classList.add('middleGrid');
-
-        const image = document.createElement('img');
-        image.setAttribute('loading', 'lazy');
-        image.setAttribute('src', tech.image.src);
-        image.setAttribute('alt', tech.image.alt);
-        image.setAttribute('title', tech.image.title);
-
-        const techName = document.createElement('h3');
-        techName.textContent = `${tech.name}`;
-
-        middleGrid.appendChild(image);
-        middleGrid.appendChild(techName);
-
-        galeriaContainer.appendChild(middleGrid);
-    });
-
-    return galeriaContainer;
+const gridGalleryConferences = document.getElementById('gridGalleryConferences');
+if (gridGalleryConferences) {
+    const conferencesGallery = renderGallery(conferences, false);
+    gridGalleryConferences.appendChild(conferencesGallery);
 }
 
-
-// MAIN ///////////////////////////////////////////////////////////////////////////////////////////
-
-/// PROJECTS
-
-const galeriaProjects = generarGaleria(projects);
-const gridGalleryContainer = document.getElementById('gridGalleryProjects');
-gridGalleryContainer.appendChild(galeriaProjects);
-
-/// CONFERENCES
-
-const galeriaConferences = generarGaleria(conferences);
-const gridGalleryContainerConferences = document.getElementById('gridGalleryConferences');
-gridGalleryContainerConferences.appendChild(galeriaConferences);
-
-/// TECH
-
-const galeriaTechnologies = generarTechGaleria(technologies);
-const gridGalleryContainerTechnologies = document.getElementById('gridGalleryTech');
-gridGalleryContainerTechnologies.appendChild(galeriaTechnologies);
+function renderTechGallery(techs) {
+    const container = document.createElement('div');
+    container.classList.add('gridGallery');
+    techs.forEach(({ image, name }) => {
+        const card = document.createElement('div');
+        card.classList.add('middleGrid');
+        card.appendChild(renderImage(image));
+        const h3 = document.createElement('h3');
+        h3.textContent = name;
+        card.appendChild(h3);
+        container.appendChild(card);
+    });
+    return container;
+}
+const gridGalleryTech = document.getElementById('gridGalleryTech');
+if (gridGalleryTech) {
+    gridGalleryTech.appendChild(renderTechGallery(technologies));
+}
