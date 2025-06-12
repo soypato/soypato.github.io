@@ -118,6 +118,7 @@ footer>article>.gridGallery>.middleGrid>a>h3 {
     .gridGallery {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        justify-items: center;
     }
 
     .main-grid-articles {

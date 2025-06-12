@@ -133,6 +133,8 @@ const projects = [
     }
 ]
 
+const publicTags = ["java", "javascript", "angular", "c", "python", "flask", "sql", "web", "cli", "desktop", "data-structures"]
+
 
 // CONFERENCES GALLERY COMPONENT
 const conferences = [
@@ -351,7 +353,6 @@ function renderCard({ image, name, description, buttons, tags }) {
 
     // Hacer clic en el card redirige al primer link, excepto si el click es en un botón
     if (buttons && Array.isArray(buttons) && buttons.length > 0) {
-        article.style.cursor = "pointer";
         article.addEventListener('click', function (e) {
             // Si el click fue en un botón, no hacer nada
             if (e.target.closest('a.fullWidthButton')) return;
@@ -360,6 +361,37 @@ function renderCard({ image, name, description, buttons, tags }) {
     }
 
     return article;
+}
+
+// En tu función donde insertás los filtros de tags, por ejemplo renderTagFilter:
+function renderTagFilter(tags, onTagClick) {
+    // ENVOLTORIO para slider y sombras:
+    const wrapper = document.createElement('div');
+    wrapper.classList.add('tags-filter-wrapper');
+
+    // El carril de tags scrolleables:
+    const container = document.createElement('div');
+    container.classList.add('tags-filter');
+    container.setAttribute('tabindex', '0');
+
+    tags.forEach(tag => {
+        const tagBtn = document.createElement('button');
+        tagBtn.classList.add('tag-filter-btn');
+        tagBtn.textContent = capitalize(tag);
+        tagBtn.addEventListener('click', () => onTagClick(tag));
+        container.appendChild(tagBtn);
+    });
+    // Botón para limpiar filtro
+    const clearBtn = document.createElement('button');
+    clearBtn.classList.add('tag-filter-btn', 'clear');
+    clearBtn.textContent = "Mostrar todo";
+    clearBtn.title = "Limpiar filtro";
+    clearBtn.addEventListener('click', () => onTagClick(null));
+    container.appendChild(clearBtn);
+
+    // Estructura: wrapper > container
+    wrapper.appendChild(container);
+    return wrapper;
 }
 
 
@@ -376,16 +408,132 @@ function renderGallery(items, showTags = false) {
     return container;
 }
 
+function getUniqueTags(projects) {
+    const tagSet = new Set();
+    projects.forEach(p => Array.isArray(p.tags) && p.tags.forEach(tag => tagSet.add(tag)));
+    return Array.from(tagSet);
+}
+
+function capitalize(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+function setupTagsShadow(wrapperSelector = '.tags-filter-wrapper', filterSelector = '.tags-filter') {
+    const wrapper = document.querySelector(wrapperSelector);
+    if (!wrapper) return;
+    const filter = wrapper.querySelector(filterSelector);
+    if (!filter) return;
+
+    function updateShadows() {
+        // ¿Hay contenido oculto a la izquierda?
+        if (filter.scrollLeft > 2) {
+            wrapper.style.setProperty('--shadow-left', 1);
+            wrapper.classList.add('has-left-shadow');
+            wrapper.style.setProperty('--shadow-left-opacity', 1);
+            wrapper.style.setProperty('--shadow-left-raw', '1');
+            wrapper.style.setProperty('--shadow-right-raw', '1');
+        } else {
+            wrapper.classList.remove('has-left-shadow');
+        }
+        // ¿Hay contenido oculto a la derecha?
+        if (filter.scrollLeft + filter.clientWidth < filter.scrollWidth - 2) {
+            wrapper.classList.add('has-right-shadow');
+        } else {
+            wrapper.classList.remove('has-right-shadow');
+        }
+
+        // Alternativamente, si querés setear el opacity directamente:
+        wrapper.style.setProperty('--left-shadow-opacity', filter.scrollLeft > 2 ? 1 : 0);
+        wrapper.style.setProperty('--right-shadow-opacity',
+            filter.scrollLeft + filter.clientWidth < filter.scrollWidth - 2 ? 1 : 0);
+        // Y modificar el CSS arriba a opacity: var(--left-shadow-opacity, 0); etc si querés.
+    }
+
+    filter.addEventListener('scroll', updateShadows);
+    window.addEventListener('resize', updateShadows);
+    setTimeout(updateShadows, 100); // Ajuste inicial (por si se renderizan dinámico)
+}
+setupTagsShadow();
+
+function setupTagsShadow(wrapperSelector = '.tags-filter-wrapper', filterSelector = '.tags-filter') {
+    document.querySelectorAll(wrapperSelector).forEach(wrapper => {
+        const filter = wrapper.querySelector(filterSelector);
+        if (!filter) return;
+
+        function updateShadows() {
+            // Sombra izquierda
+            if (filter.scrollLeft > 2) {
+                wrapper.classList.add('has-left-shadow');
+            } else {
+                wrapper.classList.remove('has-left-shadow');
+            }
+            // Sombra derecha
+            if (filter.scrollLeft + filter.clientWidth < filter.scrollWidth - 2) {
+                wrapper.classList.add('has-right-shadow');
+            } else {
+                wrapper.classList.remove('has-right-shadow');
+            }
+        }
+        // Eventos que actualizan las sombras
+        filter.addEventListener('scroll', updateShadows);
+        window.addEventListener('resize', updateShadows);
+        setTimeout(updateShadows, 100); // Inicial
+    });
+}
+
+setupTagsShadow();
+
+
 // Renderización principal
 
+// Renderizado principal con búsqueda por tags
 const gridGalleryProjects = document.getElementById('gridGalleryProjects');
+
 if (gridGalleryProjects) {
-    const projectsGallery = renderGallery(
-        projects,
-        true
-    );
-    gridGalleryProjects.appendChild(projectsGallery);
+    // 1. Obtener todos los tags únicos
+    const allTags = publicTags;
+
+    // 2. Div contenedor de filtro y galería
+    const wrapper = document.createElement('div');
+    wrapper.classList.add('gallery-wrapper');
+
+    // 3. Renderizar el filtro de tags
+    let selectedTag = null;
+    const tagFilterDiv = renderTagFilter(allTags, handleTagClick);
+    wrapper.appendChild(tagFilterDiv);
+
+    // 4. Contenedor de galería (se re-renderiza al filtrar)
+    const galleryContainer = document.createElement('div');
+    wrapper.appendChild(galleryContainer);
+
+    // 5. Función para renderizar la galería filtrada
+    function renderFilteredGallery() {
+        galleryContainer.innerHTML = ''; // Limpiar
+        let filteredProjects = projects;
+        if (selectedTag) {
+            filteredProjects = projects.filter(p => p.tags && p.tags.includes(selectedTag));
+        }
+        const gallery = renderGallery(
+            filteredProjects,
+            true,
+            { href: 'https://github.com/soypato?tab=repositories', text: 'Más proyectos' }
+        );
+        galleryContainer.appendChild(gallery);
+    }
+
+    // 6. Callback para cuando se cliquea un tag
+    function handleTagClick(tag) {
+        selectedTag = tag;
+        renderFilteredGallery();
+    }
+
+    // 7. Render inicial
+    renderFilteredGallery();
+
+    // 8. Agregar todo al contenedor real del DOM
+    gridGalleryProjects.appendChild(wrapper);
 }
+
 
 const gridGalleryConferences = document.getElementById('gridGalleryConferences');
 if (gridGalleryConferences) {
@@ -412,3 +560,4 @@ const gridGalleryTech = document.getElementById('gridGalleryTech');
 if (gridGalleryTech) {
     gridGalleryTech.appendChild(renderTechGallery(technologies));
 }
+

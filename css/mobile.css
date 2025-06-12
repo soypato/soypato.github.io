@@ -36,7 +36,8 @@ a {
     font-size: 1.4rem;
 }
 
-.navbar-nav .nav-link:hover, .middleGrid >h3:hover {
+.navbar-nav .nav-link:hover,
+.middleGrid>h3:hover {
     text-decoration: underline;
     text-decoration-color: #fff;
 }
@@ -153,4 +154,27 @@ h3 {
     footer>article>.gridGallery>.middleGrid>a>h3 {
         color: #fff;
     }
+
+    .tags-filter {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 0.5em;
+        margin: 1em 0;
+    }
+
+    .tag-filter-btn {
+        background: var(--secondary-color);
+        border: none;
+        border-radius: 1em;
+        padding: 0.4em 1em;
+        cursor: pointer;
+        color: #fff;
+    }
+
+    .tag-filter-btn:hover,
+    .tag-filter-btn.clear:hover {
+        background: var(--hover-color);
+    }
+
 }
