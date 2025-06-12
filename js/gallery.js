@@ -111,7 +111,7 @@ const projects = [
     }
 ]
 
-const publicTags = ["java", "javascript", "angular", "c", "python", "flask", "sql", "web", "cli", "desktop", "data-structures"]
+const publicTags = ["java", "javascript", "angular", "c", "web", "cli", "desktop", "data-structures"]
 
 
 // CONFERENCES GALLERY COMPONENT
