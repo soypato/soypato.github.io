@@ -227,22 +227,23 @@ const conferences = [
 
 // TECHNOLOGIES GALLERY COMPONENT
 const technologies = [
+ 
     {
         "image": {
-            "src": "img/tech-stack/html-css-js.webp",
-            "alt": "Logo de HTML, CSS, JS",
-            "title": "Logo de HTML, CSS, JS"
+            "src": "img/tech-stack/net.webp",
+            "alt": "Logo de .NET",
+            "title": "Logo de .NET"
         },
-        "name": "HTML/CSS/JS"
+        "name": ".NET"
     },
     {
         "image": {
-            "src": "img/tech-stack/angular.webp",
-            "alt": "Logo de Angular",
-            "title": "Logo de Angular"
+            "src": "img/tech-stack/sql.webp",
+            "alt": "Logo de SQL, bases de datos relacionales",
+            "title": "Logo de SQL"
         },
-        "name": "Angular"
-    },
+        "name": "Bases de datos / SQL"
+    },        
     {
         "image": {
             "src": "img/tech-stack/json.webp",
@@ -259,6 +260,22 @@ const technologies = [
         },
         "name": "Java/POO"
     },
+        {
+        "image": {
+            "src": "img/tech-stack/springb.webp",
+            "alt": "Spring Boot",
+            "title": "Logo de Spring Boot"
+        },
+        "name": "Spring Boot"
+    },  
+        {
+        "image": {
+            "src": "img/tech-stack/angular.webp",
+            "alt": "Logo de Angular",
+            "title": "Logo de Angular"
+        },
+        "name": "Angular"
+    },
     {
         "image": {
             "src": "img/tech-stack/git-github.webp",
@@ -267,22 +284,6 @@ const technologies = [
         },
         "name": "GIT & GitHub"
     },
-    {
-        "image": {
-            "src": "img/tech-stack/c.webp",
-            "alt": "Logo de C",
-            "title": "Logo de C"
-        },
-        "name": "C"
-    },
-    {
-        "image": {
-            "src": "img/tech-stack/jira.webp",
-            "alt": "Logo de Jira",
-            "title": "Logo de Jira"
-        },
-        "name": "Jira / SCRUM"
-    }
 ];
 
 
