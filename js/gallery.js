@@ -89,28 +89,6 @@ const projects = [
     },
     {
         "image": {
-            "src": "/img/countrycodefinder.webp",
-            "alt": "Página principal de CountryCodeFinder",
-            "title": "Página principal de CountryCodeFinder"
-        },
-        "name": "CountryCodeFinder",
-        "description": "Buscador de países en base a su area code. Hecho en Flask y SQL. Proyecto final para Harvard CS50.",
-        "buttons": [
-            {
-                "name": "Código",
-                "link": "https://github.com/soypato/CountryCodeFinder",
-                "title": "Enlace a GitHub"
-            },
-            {
-                "name": "Docs",
-                "link": "https://github.com/soypato/CountryCodeFinder/blob/main/readme.md",
-                "title": "Enlace a GitHub"
-            }
-        ],
-        "tags": ["flask", "sql", "python", "web"]
-    },
-    {
-        "image": {
             "src": "img/EnExterior-banner.webp",
             "alt": "Página principal de EnExterior",
             "title": "Página principal de EnExterior"
